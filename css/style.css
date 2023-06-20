@@ -1,8 +1,4 @@
 :root{
-
-    /* colors */
-
-
     /* font families */
     --ff-mont: 'Montserrat', sans-serif;
     --ff-airnt : "Airnt", sans-serif;
@@ -84,7 +80,7 @@ footer{
 
 /* ################# Index.html ################# */
 .home{
-    background-image: url(/assets/ella-don-gETE8IyZPrM-unsplash.jpg);
+    background-image: url(/assets/backgrounds/ella-don-gETE8IyZPrM-unsplash.jpg);
     background-size:cover;
     background-repeat: no-repeat;
     display: flex;
@@ -122,19 +118,17 @@ footer{
 
 /* ################# Contact.html ################# */
 .contact{
-    display: flex;
-    justify-content: center;
     padding: 7rem 2rem 2rem 2rem;
-    background-image: url(../assets/maurice-sahl.jpg);
+    background-image: url(../assets/backgrounds/maurice-sahl.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 .contact__content{
     background-color: white;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    min-width: 100%;
     padding: 2rem;
 }
 .contact__title{
@@ -166,7 +160,26 @@ footer{
 }
 
 /* ################# About-us.html ################# */
-
+.about-us{
+    padding: 7rem 2rem 2rem 2rem;
+    background-image: url(../assets/backgrounds/tony-reid.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.about-us__content{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+}
+.about-us__title{
+    margin-bottom: 2rem;
+}
+.about-us__video{
+    width: auto;
+}
 
 /* ################# Media Queries (Desktop) ################# */
 
