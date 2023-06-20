@@ -4,69 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
     <title>Contact</title>
 </head>
 <body>
     <header>
-        <img class="header-logo" src="/assets/kru-logo.png" alt="team-logo"> 
+        <img class="header-logo" src="./assets/kru-logo.png" alt="team-logo"> 
         <nav class="navbar">
             <ul class="nav-list">
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/views/matches.html">Matches</a></li>
-                <li><a href="/views/team.html">Team</a></li>
-                <li><a href="/views/about-us.html">About us</a></li>
-                <li><a href="/views/contact.html">Contact</a></li>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./views/matches.html">Matches</a></li>
+                <li><a href="./views/team.html">Team</a></li>
+                <li><a href="./views/about-us.html">About us</a></li>
+                <li><a href="./views/contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <main class="contact-main">
-        <div class="contact-container">
-
-            <h1 class="contact-h1">Contact</h1>
-
-            <div class="contact-content">
-                <div class="info-box">
-                    <h3 class="info-h3">GENERAL INQUIRIES</h3>
-                    <p class="info-p">example@example.com.ar</p>
-                </div>
-                <div class="info-box">
-                    <h3 class="info-h3">BE PART OF US. STREAMER, COUCH, PLAYER, STAFF, ETC.</h3>
-                    <p class="info-p">another-example@another-example.com.ar</p>
-                </div>
-                <div class="info-box">
-                    <h3 class="info-h3">SPONSORSHIP, COLLABS AND EVENTS</h3>
-                    <p class="info-p">another-example@another-example.com.ar</p>
-                </div>
-                <ul class="social-media-list">
-                    <li><a href="http://facebook.com"><img src="/assets/icons/facebook-pixel-perfect.png" class="facebook-icon"></a></li>
-                    <li><a href="http://instagram.com"><img src="/assets/icons/instagram-freepik.png" class="instagram-icon"></a></li>
-                    <li><a href="http://twitch.com"><img src="/assets/icons/twitch-freepik.png" class="twitch-icon"></a></li>
-                    <li><a href="http://youtube.com"><img src="/assets/icons/youtube-freepik.png" class="youtube-icon"></a></li>
-                    <li><a href="http://twitter.com"><img src="/assets/icons/twitter-pixel-perfect.png" class="twitter-icon"></a></li>
-                </ul>
-
-                <h2 class="contact-h2">Sponsors</h2>
-                <section class="sponsors-section">
-                    <img class="sponsors-logo" src="/assets/nike-logo.png" alt="nike">
-                    <img class="sponsors-logo" src="/assets/puma-logo.png" alt="puma">
-                    <img class="sponsors-logo" src="/assets/logitech-logo.png" alt="logitech">
-                    <img class="sponsors-logo" src="/assets/riot-games-logo.png" alt="riot-games">
-                    <img class="sponsors-logo" src="/assets/disney-logo.png" alt="disney">
-                </section>
-
-                <h2 class="contact-h2">Partners</h2>
-                <section class="partners-section">
-                    <img class="sponsors-logo" src="/assets/nike-logo.png" alt="nike">
-                    <img class="sponsors-logo" src="/assets/puma-logo.png" alt="puma">
-                </section>
-                
-                <iframe class="map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105819.30677078155!2d-118.56298576285047!3d34.02197542062499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bb1de8270945%3A0xbe8e3141f798976b!2sClover%20Park!5e0!3m2!1ses!2sar!4v1684956636073!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <main class="contact">
+        <div class="contact__content">
+            <h1 class="contact__title">Contact</h1>
+            <div class="contact__info-box">
+                <h3>General Inquiries</h3>
+                <p>example@example.com.ar</p>
             </div>
+            <div class="contact__info-box">
+                <h3>Be part of us</h3>
+                <p>another-example@another-example.com.ar</p>
+            </div>
+            <div class="contact__info-box">
+                <h3>Sponsorships</h3>
+                <p>another-example@another-example.com.ar</p>
+            </div>
+            <ul class="contact__social-media">
+
+                <li><a href="http://facebook.com"><img src="../assets/social/facebook.svg" class="facebook-icon"></a></li>
+
+                <li><a href="http://instagram.com"><img src="../assets/social/instagram.svg" class="instagram-icon"></a></li>
+
+                <li><a href="http://twitch.com"><img src="../assets/social/twitch.svg" class="twitch-icon"></a></li>
+
+                <li><a href="http://youtube.com"><img src="../assets/social/youtube.svg" class="youtube-icon"></a></li>
+
+                <li><a href="http://twitter.com"><img src="../assets/social/twitter.svg" class="twitter-icon"></a></li>
+
+            </ul>
+            <h2 class="contact__sponsors-title">Sponsors</h2>
+            <section class="contact__sponsors-section">
+                <img class="logo" src="/assets/nike-logo.png">
+                <img class="logo" src="/assets/puma-logo.png">
+                <img class="logo" src="/assets/logitech-logo.png">
+                <img class="logo" src="/assets/riot-games-logo.png">
+                <img class="logo" src="/assets/disney-logo.png">
+            </section>
+            <h2 class="contact__partners-title">Partners</h2>
+            <section class="contact__partners-section">
+                <img class="logo" src="/assets/nike-logo.png">
+                <img class="logo" src="/assets/puma-logo.png">
+            </section>
+            <iframe class="contact__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105819.30677078155!2d-118.56298576285047!3d34.02197542062499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bb1de8270945%3A0xbe8e3141f798976b!2sClover%20Park!5e0!3m2!1ses!2sar!4v1684956636073!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        <img class="contact-img" src="/assets/maurice-sahl.jpg" alt="background">
     </main>
     <footer>
-        <p>©2023 Juan Membiela All Rights Reserved</p>
+        <p>©2023 2saucy All Rights Reserved</p>
     </footer>
 </body>
 </html>
