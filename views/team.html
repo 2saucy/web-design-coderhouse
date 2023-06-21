@@ -4,38 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
     <title>Team</title>
 </head>
 <body>
-    <header>
-        <img class="header-logo" src="./assets/kru-logo.png" alt="team-logo"> 
+    <header class="header">
+        <img class="header__logotype" src="../assets/logos/kru-logo.png"> 
         <nav class="navbar">
-            <ul class="nav-list">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./views/matches.html">Matches</a></li>
-                <li><a href="./views/team.html">Team</a></li>
-                <li><a href="./views/about-us.html">About us</a></li>
-                <li><a href="./views/contact.html">Contact</a></li>
+            <ul class="navbar__list">
+                <li class="navbar__item"><a href="../index.html">Home</a></li>
+                <li class="navbar__item"><a href="./matches.html">Matches</a></li>
+                <li class="navbar__item"><a href="./team.html">Team</a></li>
+                <li class="navbar__item"><a href="./about-us.html">About us</a></li>
+                <li class="navbar__item"><a href="./contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <main class="team-main">
-        <div class="banner-game">
-            <h1>Game Name</h1>
+    <main class="team">
+        <div class="game">
+            <h1 class="game__name">VALORANT</h1>
         </div>
-        <div class="team-container">
+        <div class="team__players">
             <!-- Dependiendo la cantidad de jugadores se repite player-container -->
-            <div class="player-container">
-                <div class="name-flag">
-                    <h4>player-nickname</h4>
-                    <img src="#" alt="country-flag">
+            <div class="player">
+                <img class="player__image" src="../assets/s1mple.png" alt="player__image">
+                <div class="player__info">
+                    <h4 class="player__nickname">s1mple</h4>
+                    <img class="player__country-image" src="../assets/ukraine.png" alt="country">
                 </div>
-                <img src="#" alt="player-img">
             </div>
         </div>
     </main>
     <footer>
-        <p>©2023 Juan Membiela All Rights Reserved</p>
+        <p>©2023 2saucy All Rights Reserved</p>
     </footer>
 </body>
 </html>

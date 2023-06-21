@@ -199,6 +199,73 @@ footer{
     display: none;
 }
 
+/* ################# Team.html (No responsive/ En progreso..) ################# */
+.game{
+    background-image: url(../assets/backgrounds/VbTJ9MN.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+.game__name{
+    color: white;
+    letter-spacing: 0.2em;
+}
+.player{
+    background-color: rgb(36, 36, 36);
+    display: flex;
+    padding: 1rem;
+}
+.player__image{
+    width: 150px;
+}
+.player__info{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.player__nickname{
+    color: white;
+    font-size: 2rem;
+}
+.player__country-image{
+    height: 2rem;
+}
+
+/* ################# Matches.html (No responsive/ En progreso..) ################# */
+.upcoming{
+    background-color: rgb(36, 36, 36);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+.upcoming__teams{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.upcoming__teams img{
+    width: 150px;
+}
+.results h2{
+    margin: 2rem 1rem;
+}
+.match-card{
+    box-shadow: .1rem .1rem .5rem .1rem rgba(0, 0, 0, 0.171);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.match-card span{
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
 /* ################# Media Queries (Desktop) ################# */
 @media screen and (min-width: 1024px) {
     .home__title,
