@@ -1,5 +1,16 @@
+$color-white: #ffffff;
+$color-dark-blue: #001C30;
+$color-light-gray: #868686;
+
 $ff-mont: 'Montserrat', sans-serif;
-$ff-airnt : "Airnt", sans-serif;
+$ff-airnt: "Airnt", sans-serif;
+
+$fw-400: 400;
+$fw-600: 600;
+
+$padding: 2rem !default;
+$border-radius: 2rem !default;
+$gap: 2rem !default;
 
 *{
     font-family: $ff-mont;

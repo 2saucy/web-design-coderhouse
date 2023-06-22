@@ -1,10 +1,22 @@
+/*********** Reset ***********/
 @import "./base";
 
+/*********** Components ***********/
 @import "./components/header";
 @import "./components/footer";
 
+
+/*********** Index.html ***********/
 @import "./pages/index";
+
+/*********** Contact.html ***********/
 @import "./pages/contact";
+
+/*********** About-us.html ***********/
 @import "./pages/about-us";
+
+/*********** Team.html ***********/
 @import "./pages/team";
+
+/*********** Matches.html ***********/
 @import "./pages/matches";

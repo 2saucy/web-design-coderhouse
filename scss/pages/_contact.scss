@@ -4,15 +4,15 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 2rem;
+    padding: $padding;
 
     &__content{
         display: flex;
         flex-direction: column;
-        gap: 1rem;
-        background-color: white;
-        padding: 2rem;
-        border-radius: 2rem;
+        gap: $gap;
+        background-color: $color-white;
+        padding: $padding;
+        border-radius: $border-radius;
         min-width: 100%;
     }
     &__title{
@@ -20,27 +20,21 @@
     }
     &__info-box{
         h3{
-            color: rgba(29, 29, 29, 0.534);
+            color: $color-light-gray;
             font-size: .9em;
-            font-weight: 600;
+            font-weight: $fw-600;
             text-transform: uppercase;
         }
     }
     &__social-media{
         display: flex;
-        gap: 1.2rem;
+        gap: $gap;
     }
-    &__sponsors-title{
-        font-size: 1em;
-    }
+    &__sponsors-title,
     &__partners-title{
         font-size: 1em;
     }
-    &__sponsors-section{
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-    }
+    &__sponsors-section,
     &__partners-section{
         display: flex;
         align-items: center;
@@ -54,7 +48,7 @@
         display: none;
     }
 
-    @media screen and (min-width: 1024px){
+    @media screen and (min-width: 64em){
         &{
             padding: 0;
             background-image: none;

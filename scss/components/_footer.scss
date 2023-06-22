@@ -1,8 +1,6 @@
 footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     background-color: rgb(24, 24, 24);
-    color: white;
-    padding: 20px 0px;
+    color: $color-white;
+    padding: $padding;
 }

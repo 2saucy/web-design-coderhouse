@@ -1,13 +1,14 @@
 .home{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    padding: 2rem;
+    gap: $gap;
+    padding: $padding;
     background-image: url(/assets/backgrounds/ella-don-gETE8IyZPrM-unsplash.jpg);
     background-size:cover;
     background-repeat: no-repeat;
-    flex-direction: column;
-    gap: 2rem;
-    color: white;
+    color: $color-white;
+
     &__title{
         font-size: 2em;
     }
@@ -16,18 +17,19 @@
     }
     &__button{
         cursor: pointer;
-        background-color: rgb(255, 0, 85);
-        color: white;
+        background-color: #ff198f;
+        color: $color-white;
         font-size: 1em;
-        font-weight: 600;
+        font-weight: $fw-600;
         border: none;
-        border-radius: 2rem;
+        border-radius: $border-radius;
         padding: 1rem 2rem;
         width: fit-content;
     }
-    @media screen and (min-width: 1024px){
+
+    @media screen and (min-width: 64em){
         &__title{
-            font-size: 3em;
+            font-size: 2.5em;
             width: 50%;
         }
         &__description{
@@ -40,7 +42,7 @@
 .sponsors{
     display: flex;
     justify-content: center;
-    padding: 2rem;
     align-items: center;
     flex-wrap: wrap;
+    padding: $padding;
 }

@@ -1,3 +1,4 @@
+/*********** Reset ***********/
 * {
   font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
@@ -37,8 +38,9 @@ main {
   width: 80px;
 }
 
+/*********** Components ***********/
 .header {
-  background-color: white;
+  background-color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -53,28 +55,38 @@ main {
 .header__nav-list {
   display: flex;
   gap: 1rem;
-  font-size: 1em;
+  font-size: 0.7em;
+}
+.header__nav-item a {
+  color: #001C30;
+}
+.header__nav-item a:hover {
+  font-weight: 600;
+}
+@media screen and (min-width: 1024px) {
+  .header__nav-list {
+    font-size: 1em;
+  }
 }
 
 footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   background-color: rgb(24, 24, 24);
-  color: white;
-  padding: 20px 0px;
+  color: #ffffff;
+  padding: 2rem;
 }
 
+/*********** Index.html ***********/
 .home {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  gap: 2rem;
   padding: 2rem;
   background-image: url(/assets/backgrounds/ella-don-gETE8IyZPrM-unsplash.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  flex-direction: column;
-  gap: 2rem;
-  color: white;
+  color: #ffffff;
 }
 .home__title {
   font-size: 2em;
@@ -84,8 +96,8 @@ footer {
 }
 .home__button {
   cursor: pointer;
-  background-color: rgb(255, 0, 85);
-  color: white;
+  background-color: #ff198f;
+  color: #ffffff;
   font-size: 1em;
   font-weight: 600;
   border: none;
@@ -93,9 +105,9 @@ footer {
   padding: 1rem 2rem;
   width: fit-content;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 64em) {
   .home__title {
-    font-size: 3em;
+    font-size: 2.5em;
     width: 50%;
   }
   .home__description {
@@ -107,11 +119,12 @@ footer {
 .sponsors {
   display: flex;
   justify-content: center;
-  padding: 2rem;
   align-items: center;
   flex-wrap: wrap;
+  padding: 2rem;
 }
 
+/*********** Contact.html ***********/
 .contact {
   display: flex;
   background-image: url(../assets/backgrounds/maurice-sahl.jpg);
@@ -123,8 +136,8 @@ footer {
 .contact__content {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  background-color: white;
+  gap: 2rem;
+  background-color: #ffffff;
   padding: 2rem;
   border-radius: 2rem;
   min-width: 100%;
@@ -133,27 +146,19 @@ footer {
   margin-bottom: 2rem;
 }
 .contact__info-box h3 {
-  color: rgba(29, 29, 29, 0.534);
+  color: #868686;
   font-size: 0.9em;
   font-weight: 600;
   text-transform: uppercase;
 }
 .contact__social-media {
   display: flex;
-  gap: 1.2rem;
+  gap: 2rem;
 }
-.contact__sponsors-title {
+.contact__sponsors-title, .contact__partners-title {
   font-size: 1em;
 }
-.contact__partners-title {
-  font-size: 1em;
-}
-.contact__sponsors-section {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.contact__partners-section {
+.contact__sponsors-section, .contact__partners-section {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -165,7 +170,7 @@ footer {
 .contact__banner {
   display: none;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 64em) {
   .contact {
     padding: 0;
     background-image: none;
@@ -186,6 +191,7 @@ footer {
   }
 }
 
+/*********** About-us.html ***********/
 .about-us {
   display: flex;
   background-image: url(../assets/backgrounds/tony-reid.jpg);
@@ -193,6 +199,15 @@ footer {
   background-size: cover;
   background-position: center;
   padding: 2rem;
+}
+.about-us__content {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  border-radius: 2rem;
+  min-width: 100%;
 }
 .about-us__title {
   margin-bottom: 2rem;
@@ -204,7 +219,7 @@ footer {
 .about-us__banner {
   display: none;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 64em) {
   .about-us {
     padding: 0;
     background-image: none;
@@ -225,7 +240,7 @@ footer {
   }
 }
 
-/* ################# Team.html (No responsive/ En progreso..) ################# */
+/*********** Team.html ***********/
 .game {
   background-image: url(../assets/backgrounds/VbTJ9MN.png);
   background-repeat: no-repeat;
@@ -262,7 +277,7 @@ footer {
   height: 2rem;
 }
 
-/* ################# Matches.html (No responsive/ En progreso..) ################# */
+/*********** Matches.html ***********/
 .upcoming {
   background-color: rgb(36, 36, 36);
   color: white;
