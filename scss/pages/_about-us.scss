@@ -1,0 +1,41 @@
+.about-us{
+    display: flex;
+    background-image: url(../assets/backgrounds/tony-reid.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 2rem;
+
+    &__title{
+        margin-bottom: 2rem;
+    }
+    &__video{
+        margin-top: 2rem;
+        width: auto;
+    }
+    &__banner{
+        display: none;
+    }
+
+    @media screen and (min-width: 1024px){
+        &{
+            padding: 0;
+            background-image: none;
+        }
+        &__content{
+            min-height: 100vh;
+            width: 50%;
+            border-radius: 0;
+            min-width: 0;
+        }
+        &__banner{
+            display: block;
+            background-image: url(../assets/backgrounds/tony-reid.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 50%;
+        }
+    }
+}
+

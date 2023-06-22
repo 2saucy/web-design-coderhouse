@@ -1,308 +1,298 @@
-:root{
-    /* font families */
-    --ff-mont: 'Montserrat', sans-serif;
-    --ff-airnt : "Airnt", sans-serif;
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-*{
-    font-family: var(--ff-mont);
-    box-sizing: border-box;
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+h1,
+h2 {
+  font-family: "Airnt", sans-serif;
+}
+
+main {
+  min-height: 100vh;
+  margin-top: 80px;
+}
+
+.logo {
+  width: 80px;
+}
+
+.header {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+  position: fixed;
+  top: 0;
+  min-width: 100%;
+}
+.header__logotype {
+  width: 80px;
+}
+.header__nav-list {
+  display: flex;
+  gap: 1rem;
+  font-size: 1em;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(24, 24, 24);
+  color: white;
+  padding: 20px 0px;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  background-image: url(/assets/backgrounds/ella-don-gETE8IyZPrM-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  gap: 2rem;
+  color: white;
+}
+.home__title {
+  font-size: 2em;
+}
+.home__description {
+  font-size: 1em;
+}
+.home__button {
+  cursor: pointer;
+  background-color: rgb(255, 0, 85);
+  color: white;
+  font-size: 1em;
+  font-weight: 600;
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  width: fit-content;
+}
+@media screen and (min-width: 1024px) {
+  .home__title {
+    font-size: 3em;
+    width: 50%;
+  }
+  .home__description {
+    font-size: 1.3em;
+    width: 50%;
+  }
+}
+
+.sponsors {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contact {
+  display: flex;
+  background-image: url(../assets/backgrounds/maurice-sahl.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+}
+.contact__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 2rem;
+  min-width: 100%;
+}
+.contact__title {
+  margin-bottom: 2rem;
+}
+.contact__info-box h3 {
+  color: rgba(29, 29, 29, 0.534);
+  font-size: 0.9em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.contact__social-media {
+  display: flex;
+  gap: 1.2rem;
+}
+.contact__sponsors-title {
+  font-size: 1em;
+}
+.contact__partners-title {
+  font-size: 1em;
+}
+.contact__sponsors-section {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.contact__partners-section {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.contact__map {
+  max-height: 200px;
+  width: auto;
+}
+.contact__banner {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .contact {
     padding: 0;
-}
-
-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    line-height: 1.5;
+    background-image: none;
+  }
+  .contact__content {
     min-height: 100vh;
-}
-
-body,
-p,
-h1,
-h2,
-h3{
-    margin: 0;
-}
-
-h1,
-h2{
-    font-family: var(--ff-airnt);
-}
-
-img{
-    max-width: 100%;
-}
-
-a{
-    text-decoration: none;
-    color: rgb(20, 20, 20);
-}
-
-ul{
-    list-style: none;
-}
-
-main{
-    min-height: 100vh;
-    margin-top: 80px;
-}
-
-.logo{
-    width: 80px;
-}
-
-/* ################# Header ################# */
-.header{
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 20px;
-    position: fixed;
-    top: 0;
-    min-width: 100%;
-}
-.header__logotype{
-    width: 80px;
-}
-.navbar__list{
-    display: flex;
-    gap: 1rem;
-    font-size: 1em;
-}
-
-/* ################# Footer ################# */
-footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(24, 24, 24);
-    color: white;
-    padding: 20px 0px;
-}
-
-/* ################# Index.html ################# */
-.home,
-.sponsors{
-    display: flex;
-    justify-content: center;
-    padding: 2rem;
-}
-
-.home{
-    background-image: url(/assets/backgrounds/ella-don-gETE8IyZPrM-unsplash.jpg);
-    background-size:cover;
-    background-repeat: no-repeat;
-    flex-direction: column;
-    gap: 2rem;
-    color: white;
-}
-.home__title{
-    font-size: 2em;
-}
-.home__description{
-    font-size: 1em;
-}
-.home__button{
-    cursor: pointer;
-    background-color: rgb(255, 0, 85);
-    color: white;
-    font-size: 1em;
-    font-weight: 600;
-    border: none;
-    border-radius: 2rem;
-    padding: 1rem 2rem;
-    width: fit-content;
-}
-.sponsors{
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-/* ################# Contact.html ################# */
-.contact{
-    display: flex;
+    width: 50%;
+    border-radius: 0;
+    min-width: 0;
+  }
+  .contact__banner {
+    display: block;
     background-image: url(../assets/backgrounds/maurice-sahl.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 2rem;
-}
-.contact__content{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    background-color: white;
-    padding: 2rem;
-    border-radius: 2rem;
-    min-width: 100%;
-}
-.contact__title{
-    margin-bottom: 2rem;
-}
-.contact__info-box h3{
-    color: rgba(29, 29, 29, 0.534);
-    font-size: .9em;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-.contact__social-media{
-    display: flex;
-    gap: 1.2rem;
-}
-.contact__sponsors-title,
-.contact__partners-title{
-    font-size: 1em;
-}
-.contact__sponsors-section,
-.contact__partners-section{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-}
-.contact__map{
-    max-height: 200px;
-    width: auto;
-}
-.about-us__banner{
-    display: none;
+    width: 50%;
+  }
 }
 
-/* ################# About-us.html ################# */
-.about-us{
-    display: flex;
+.about-us {
+  display: flex;
+  background-image: url(../assets/backgrounds/tony-reid.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+}
+.about-us__title {
+  margin-bottom: 2rem;
+}
+.about-us__video {
+  margin-top: 2rem;
+  width: auto;
+}
+.about-us__banner {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .about-us {
+    padding: 0;
+    background-image: none;
+  }
+  .about-us__content {
+    min-height: 100vh;
+    width: 50%;
+    border-radius: 0;
+    min-width: 0;
+  }
+  .about-us__banner {
+    display: block;
     background-image: url(../assets/backgrounds/tony-reid.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 2rem;
-}
-.about-us__content{
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 2rem;
-    border-radius: 2rem;
-    min-width: 100%;
-}
-.about-us__title{
-    margin-bottom: 2rem;
-}
-.about-us__video{
-    margin-top: 2rem;
-    width: auto;
-}
-.about-us__banner{
-    display: none;
+    width: 50%;
+  }
 }
 
 /* ################# Team.html (No responsive/ En progreso..) ################# */
-.game{
-    background-image: url(../assets/backgrounds/VbTJ9MN.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
+.game {
+  background-image: url(../assets/backgrounds/VbTJ9MN.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
 }
-.game__name{
-    color: white;
-    letter-spacing: 0.2em;
+.game__name {
+  color: white;
+  letter-spacing: 0.2em;
 }
-.player{
-    background-color: rgb(36, 36, 36);
-    display: flex;
-    padding: 1rem;
+
+.player {
+  background-color: rgb(36, 36, 36);
+  display: flex;
+  padding: 1rem;
 }
-.player__image{
-    width: 150px;
+.player__image {
+  width: 150px;
 }
-.player__info{
-    display: flex;
-    gap: 1rem;
-    align-items: center;
+.player__info {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
-.player__nickname{
-    color: white;
-    font-size: 2rem;
+.player__nickname {
+  color: white;
+  font-size: 2rem;
 }
-.player__country-image{
-    height: 2rem;
+.player__country-image {
+  height: 2rem;
 }
 
 /* ################# Matches.html (No responsive/ En progreso..) ################# */
-.upcoming{
-    background-color: rgb(36, 36, 36);
-    color: white;
-    text-align: center;
-    padding: 1rem;
+.upcoming {
+  background-color: rgb(36, 36, 36);
+  color: white;
+  text-align: center;
+  padding: 1rem;
 }
-.upcoming__teams{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.upcoming__teams {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.upcoming__teams img{
-    width: 150px;
-}
-.results h2{
-    margin: 2rem 1rem;
-}
-.match-card{
-    box-shadow: .1rem .1rem .5rem .1rem rgba(0, 0, 0, 0.171);
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.match-card span{
-    display: flex;
-    align-items: center;
-    font-weight: 600;
+.upcoming__teams img {
+  width: 150px;
 }
 
-/* ################# Media Queries (Desktop) ################# */
-@media screen and (min-width: 1024px) {
-    .home__title,
-    .home__description{
-        width: 50%;
-    }
-    .home__title{
-        font-size: 3em;
-    }
-
-    .home__description{
-        font-size: 1.3em;
-    }
-    .contact,
-    .about-us{
-        padding: 0;
-        background-image: none;
-    }
-    .contact__content,
-    .about-us__content{
-        min-height: 100vh;
-        width: 50%;
-        border-radius: 0;
-        min-width: 0;
-    }
-    .contact__banner,
-    .about-us__banner{
-        display: block;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        width: 50%;
-    }
-    .about-us__banner{
-        background-image: url(../assets/backgrounds/tony-reid.jpg);
-    }
-    .contact__banner{
-        background-image: url(../assets/backgrounds/maurice-sahl.jpg);
-    }
+.results h2 {
+  margin: 2rem 1rem;
 }
+
+.match-card {
+  box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem rgba(0, 0, 0, 0.171);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.match-card span {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=style.css.map */
