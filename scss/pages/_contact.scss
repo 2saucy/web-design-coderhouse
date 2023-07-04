@@ -1,15 +1,10 @@
 .contact{
-    display: flex;
-    background-image: url(../assets/backgrounds/maurice-sahl.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    @include flexbox();
+    @include bg-image($url: "../assets/backgrounds/maurice-sahl.jpg");
     padding: $padding;
 
     &__content{
-        display: flex;
-        flex-direction: column;
-        gap: $gap;
+        @include flexbox($direction: column);
         background-color: $color-white;
         padding: $padding;
         border-radius: $border-radius;
@@ -27,8 +22,7 @@
         }
     }
     &__social-media{
-        display: flex;
-        gap: $gap;
+        @include flexbox();
     }
     &__sponsors-title,
     &__partners-title{
@@ -36,9 +30,7 @@
     }
     &__sponsors-section,
     &__partners-section{
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
+        @include flexbox($align: center, $wrap: wrap)
     }
     &__map{
         max-height: 200px;
@@ -48,7 +40,7 @@
         display: none;
     }
 
-    @media screen and (min-width: 64em){
+    @include desktop{
         &{
             padding: 0;
             background-image: none;
@@ -60,11 +52,8 @@
             min-width: 0;
         }
         &__banner{
+            @include bg-image($url: "../assets/backgrounds/maurice-sahl.jpg");
             display: block;
-            background-image: url(../assets/backgrounds/maurice-sahl.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
             width: 50%;
         }
     }

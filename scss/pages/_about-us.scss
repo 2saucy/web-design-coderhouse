@@ -1,16 +1,11 @@
 .about-us{
-    display: flex;
-    background-image: url(../assets/backgrounds/tony-reid.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    @include flexbox();
+    @include bg-image($url: "../assets/backgrounds/tony-reid.jpg");
     padding: $padding;
 
     &__content{
+        @include flexbox($direction: column, $justify: space-between);
         background-color: $color-white;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
         padding: $padding;
         border-radius: $border-radius;
         min-width: 100%;
@@ -26,7 +21,7 @@
         display: none;
     }
 
-    @media screen and (min-width: 64em){
+    @include desktop{
         &{
             padding: 0;
             background-image: none;
@@ -39,10 +34,7 @@
         }
         &__banner{
             display: block;
-            background-image: url(../assets/backgrounds/tony-reid.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
+            @include bg-image($url: "../assets/backgrounds/tony-reid.jpg");
             width: 50%;
         }
     }

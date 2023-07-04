@@ -19,14 +19,8 @@ a {
   text-decoration: none;
 }
 
-ul,
-ol {
+ul, ol {
   list-style: none;
-}
-
-h1,
-h2 {
-  font-family: "Airnt", sans-serif;
 }
 
 main {
@@ -82,10 +76,11 @@ footer {
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
-  padding: 2rem;
-  background-image: url(/assets/backgrounds/ella-don-gETE8IyZPrM-unsplash.jpg);
-  background-size: cover;
+  background-image: url("../assets/backgrounds/ella-don-gETE8IyZPrM-unsplash.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
   color: #ffffff;
 }
 .home__title {
@@ -119,7 +114,8 @@ footer {
 .sponsors {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-content: center;
+  gap: 2rem;
   flex-wrap: wrap;
   padding: 2rem;
 }
@@ -127,7 +123,8 @@ footer {
 /*********** Contact.html ***********/
 .contact {
   display: flex;
-  background-image: url(../assets/backgrounds/maurice-sahl.jpg);
+  gap: 2rem;
+  background-image: url("../assets/backgrounds/maurice-sahl.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -160,7 +157,8 @@ footer {
 }
 .contact__sponsors-section, .contact__partners-section {
   display: flex;
-  align-items: center;
+  align-content: center;
+  gap: 2rem;
   flex-wrap: wrap;
 }
 .contact__map {
@@ -182,11 +180,11 @@ footer {
     min-width: 0;
   }
   .contact__banner {
-    display: block;
-    background-image: url(../assets/backgrounds/maurice-sahl.jpg);
+    background-image: url("../assets/backgrounds/maurice-sahl.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    display: block;
     width: 50%;
   }
 }
@@ -194,17 +192,19 @@ footer {
 /*********** About-us.html ***********/
 .about-us {
   display: flex;
-  background-image: url(../assets/backgrounds/tony-reid.jpg);
+  gap: 2rem;
+  background-image: url("../assets/backgrounds/tony-reid.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   padding: 2rem;
 }
 .about-us__content {
-  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 2rem;
+  background-color: #ffffff;
   padding: 2rem;
   border-radius: 2rem;
   min-width: 100%;
@@ -232,7 +232,7 @@ footer {
   }
   .about-us__banner {
     display: block;
-    background-image: url(../assets/backgrounds/tony-reid.jpg);
+    background-image: url("../assets/backgrounds/tony-reid.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
