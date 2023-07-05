@@ -14,42 +14,48 @@
         }
         &--role{
             font-family: $ff-serif;
-            font-size: 14px;
-            color: #979797;
+            font-size: 0.875em;
+            color: $color-light-gray;
         }
         &--nickname{
-            font-size: 20px;
-            font-weight: bold;
-            color: #020202;
+            font-size: 1.25em;
+            font-weight: $fw-900;
+            color: $color-dark-blue;
         }
         &--realname{
-            font-size: 14px;
-            color: #020202;
+            font-size: 0.875em;
+            color: $color-dark-blue;
         }
         &--country-flag{
             width: 24px;
         }
     }
     &__social-media{
-        @include flexbox($direction: column, $gap: 1rem);
+        @include flexbox($direction: column, $align-i:center, $gap: 1rem);
     }
 
     @include desktop{
         min-width: 50vw;
-
+        
         &__player-info{
             &--role{
-                font-size: 16px;
+                font-size: 1em;
             }
             &--nickname{
-                font-size: 24px;
+                font-size: 1.5em;
             }
             &--realname{
-                font-size: 16px;
+                font-size: 1em;
             }
             &--country-flag{
                 width: 24px;
             }
         }
+    }
+}
+
+.tw path{
+    &:hover{
+        fill:red;
     }
 }

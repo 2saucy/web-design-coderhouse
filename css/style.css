@@ -38,12 +38,13 @@ main {
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
-  background-color: #ffffff;
+  background-color: #181818;
   position: fixed;
   top: 0;
   z-index: 2000;
   min-width: 100%;
-  padding-right: 20px;
+  min-height: 80px;
+  padding-right: 1.25rem;
 }
 .header__logotype {
   width: 80px;
@@ -52,17 +53,24 @@ main {
 .header__nav-list {
   display: flex;
   gap: 1rem;
-  font-size: 0.7em;
+  font-size: 0.875em;
 }
 .header__nav-item a {
-  color: #001C30;
+  white-space: nowrap;
+  color: #ffffff;
 }
 .header__nav-item a:hover {
   font-weight: 600;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 55em) {
+  .header {
+    background-color: #ffffff;
+  }
   .header__nav-list {
     font-size: 1em;
+  }
+  .header__nav-item a {
+    color: #001C30;
   }
 }
 
@@ -93,17 +101,17 @@ footer {
 }
 .player-card__player-info--role {
   font-family: "Roboto Slab", serif;
-  font-size: 14px;
-  color: #979797;
+  font-size: 0.875em;
+  color: #868686;
 }
 .player-card__player-info--nickname {
-  font-size: 20px;
-  font-weight: bold;
-  color: #020202;
+  font-size: 1.25em;
+  font-weight: 900;
+  color: #001C30;
 }
 .player-card__player-info--realname {
-  font-size: 14px;
-  color: #020202;
+  font-size: 0.875em;
+  color: #001C30;
 }
 .player-card__player-info--country-flag {
   width: 24px;
@@ -111,6 +119,7 @@ footer {
 .player-card__social-media {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
 }
 @media screen and (min-width: 55em) {
@@ -118,17 +127,21 @@ footer {
     min-width: 50vw;
   }
   .player-card__player-info--role {
-    font-size: 16px;
+    font-size: 1em;
   }
   .player-card__player-info--nickname {
-    font-size: 24px;
+    font-size: 1.5em;
   }
   .player-card__player-info--realname {
-    font-size: 16px;
+    font-size: 1em;
   }
   .player-card__player-info--country-flag {
     width: 24px;
   }
+}
+
+.tw path:hover {
+  fill: red;
 }
 
 .game-card {
@@ -334,81 +347,6 @@ footer {
 }
 
 /*********** Teams.html ***********/
-.valorant__banner {
-  background-image: url(../assets/backgrounds/VbTJ9MN.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 200px;
-  position: relative;
-}
-.valorant__circle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  background-color: rgb(187, 187, 187);
-  border-radius: 50%;
-  width: 120px;
-  aspect-ratio: 1;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.valorant__circle--logo {
-  width: 120px;
-}
-.valorant__content {
-  margin-top: 4rem;
-  padding: 2rem;
-}
-.valorant__content--title {
-  font-size: 24px;
-  text-transform: uppercase;
-  font-weight: bold;
-  margin-bottom: 2rem;
-}
-.valorant__content--description {
-  font-family: "Roboto Slab", serif;
-  color: #363636;
-  font-size: 16px;
-  line-height: 30px;
-  max-width: 767px;
-}
-.valorant__content--video {
-  margin-top: 2rem;
-  width: 100%;
-}
-.valorant__team-matches-container {
-  padding: 2rem;
-}
-.valorant__team h2, .valorant__matches h2 {
-  margin-bottom: 1rem;
-}
-@media screen and (min-width: 55em) {
-  .valorant__circle {
-    top: 100%;
-    left: 10%;
-  }
-  .valorant__content {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    margin-top: 0;
-  }
-  .valorant__content--video {
-    width: 700px;
-  }
-  .valorant__team-matches-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-    padding: 2rem;
-  }
-}
-
-/*********** Valorant.html ***********/
 .teams {
   display: flex;
   flex-direction: column;
@@ -445,6 +383,81 @@ footer {
   .teams div {
     height: 600px;
     width: 200px;
+  }
+}
+
+/*********** Valorant.html ***********/
+.valorant__banner {
+  background-image: url(../assets/backgrounds/VbTJ9MN.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  position: relative;
+}
+.valorant__circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-color: #ff4655;
+  border-radius: 50%;
+  width: 120px;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.valorant__circle--logo {
+  width: 120px;
+}
+.valorant__content {
+  margin-top: 4rem;
+  padding: 2rem;
+}
+.valorant__content--title {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+.valorant__content--description {
+  font-family: "Roboto Slab", serif;
+  color: #001C30;
+  font-size: 1em;
+  line-height: 30px;
+  max-width: 767px;
+}
+.valorant__content--video {
+  margin-top: 2rem;
+  width: 100%;
+}
+.valorant__team-matches-container {
+  padding: 2rem;
+}
+.valorant__team h2, .valorant__matches h2 {
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 55em) {
+  .valorant__circle {
+    top: 100%;
+    left: 10%;
+  }
+  .valorant__content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 0;
+  }
+  .valorant__content--video {
+    width: 700px;
+  }
+  .valorant__team-matches-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
   }
 }
 

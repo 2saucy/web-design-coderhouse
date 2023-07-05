@@ -1,33 +1,79 @@
-.teams{
-    @include flexbox($direction:column, $justify:center, $align-i:center);
-    @include bg-image($url: "../assets/backgrounds/aleksandr-popov-3InMDrsuYrk-unsplash.jpg");
-    padding: 2rem;
+.valorant{
 
-    div{
+    &__banner{
+        background-image: url(../assets/backgrounds/VbTJ9MN.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
         height: 200px;
-        width: 100%;
+        position: relative;
+    }
 
-        img{
-            filter: grayscale(100%);
-            border-radius: .5rem;
-            object-fit: cover;
+    &__circle{
+        @include flexbox($justify:center, $align-i: center);
+        @include circle($width: 120px, $bg-color:#ff4655);
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        
+        &--logo{
+            width: 120px;
+        }
+    }
+
+    &__content{
+        margin-top: 4rem;
+        padding: 2rem;
+
+        &--title{
+            font-size: 1.5em;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 2rem;
+        }
+        &--description{
+            font-family: $ff-serif;
+            color: $color-dark-blue;
+            font-size: 1em;
+            line-height: 30px;
+            max-width: 767px;
+        }
+        &--video{
+            margin-top: 2rem;
             width: 100%;
-            height: 100%;
+        }
+    }
 
-            &:hover{
-                filter: none;
-                box-shadow: 0 0 2rem .1rem rgba(255, 1, 242, 0.39);
-                transform: scale(1.02);
-                transition: .5s ease;
-            }
+    &__team-matches-container{
+        padding: 2rem;
+    }
+
+    &__team,
+    &__matches{
+        h2{
+            margin-bottom: 1rem;
         }
     }
 
     @include desktop{
-        flex-direction: row;
-        div{
-            height: 600px;
-            width: 200px;
+
+        &__circle{
+            top: 100%;
+            left: 10%;
+        }
+
+        &__content{
+            @include flexbox($align-i: center);
+            margin-top: 0;
+            &--video{
+                width: 700px;
+            }
+        }
+
+        &__team-matches-container{
+            @include flexbox($justify: space-between);
+            padding: 2rem;
         }
     }
 }
