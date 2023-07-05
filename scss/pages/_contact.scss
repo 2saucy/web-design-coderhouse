@@ -30,7 +30,7 @@
     }
     &__sponsors-section,
     &__partners-section{
-        @include flexbox($align: center, $wrap: wrap)
+        @include flexbox($align-i: center, $wrap: wrap)
     }
     &__map{
         max-height: 200px;

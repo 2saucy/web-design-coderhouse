@@ -1,6 +1,6 @@
 .home{
     @include flexbox($direction: column, $justify: center);
-    @include bg-image($url: "../assets/backgrounds/ella-don-gETE8IyZPrM-unsplash.jpg");
+    @include bg-image($url: "../assets/backgrounds/fondito.jpg");
     padding: $padding;
     color: $color-white;
 
@@ -35,6 +35,6 @@
 }
 
 .sponsors{
-    @include flexbox($justify: center, $align: center, $wrap: wrap);
+    @include flexbox($justify: center, $align-i: center, $wrap: wrap);
     padding: $padding;
 }

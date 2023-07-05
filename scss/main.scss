@@ -4,6 +4,8 @@
 /*********** Components ***********/
 @import "./components/header";
 @import "./components/footer";
+@import "./components/player-card";
+@import "./components/game-card";
 
 
 /*********** Index.html ***********/
@@ -15,8 +17,8 @@
 /*********** About-us.html ***********/
 @import "./pages/about-us";
 
-/*********** Team.html ***********/
-@import "./pages/team";
+/*********** Teams.html ***********/
+@import "./pages/teams";
 
-/*********** Matches.html ***********/
-@import "./pages/matches";
+/*********** Valorant.html ***********/
+@import "./pages/valorant";

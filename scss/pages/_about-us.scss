@@ -13,6 +13,11 @@
     &__title{
         margin-bottom: 2rem;
     }
+    &__description{
+        p{
+            font-family: $ff-serif;
+        }
+    }
     &__video{
         margin-top: 2rem;
         width: auto;
@@ -39,4 +44,3 @@
         }
     }
 }
-

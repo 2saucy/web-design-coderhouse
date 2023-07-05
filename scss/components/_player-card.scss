@@ -1,0 +1,55 @@
+.player-card{
+    @include flexbox($justify: space-between);
+    padding: 1rem;
+    border-radius: .4rem;
+    box-shadow: 0 0 .9rem .1rem rgb(243, 243, 243);
+    margin-bottom: 1rem;
+    width: 100%;
+
+    &__player-info{
+        @include flexbox($align-i:center);
+
+        &--image{
+            width: 90px;
+        }
+        &--role{
+            font-family: $ff-serif;
+            font-size: 14px;
+            color: #979797;
+        }
+        &--nickname{
+            font-size: 20px;
+            font-weight: bold;
+            color: #020202;
+        }
+        &--realname{
+            font-size: 14px;
+            color: #020202;
+        }
+        &--country-flag{
+            width: 24px;
+        }
+    }
+    &__social-media{
+        @include flexbox($direction: column, $gap: 1rem);
+    }
+
+    @include desktop{
+        min-width: 50vw;
+
+        &__player-info{
+            &--role{
+                font-size: 16px;
+            }
+            &--nickname{
+                font-size: 24px;
+            }
+            &--realname{
+                font-size: 16px;
+            }
+            &--country-flag{
+                width: 24px;
+            }
+        }
+    }
+}
