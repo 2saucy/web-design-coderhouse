@@ -10,8 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <title>Legit Ones · Games</title>
+    <title>Legit Ones · Our Teams</title>
 </head>
 <body>
     <header class="header">
@@ -26,18 +28,30 @@
         </nav>
     </header>
     <main class="teams">
-        <div>
-            <a href="./valorant.html"><img src="../assets/backgrounds/VALORANT_Jett_Dark.jpg" alt="VALORANT"></a>
+        <div class="teams__text-content">
+            <h1>MEET OUR <span>PROS</span></h1>
+            <p>Discover our talented professional gaming teams in action and be amazed by their skills in the gaming world.</p>
         </div>
-        <div>
-            <a href="#"><img src="../assets/backgrounds/csgo-bg.jpg" alt="VALORANT"></a>
-        </div>
-        <div>
-            <a href="#"><img src="../assets/backgrounds/Jinx_ArcaneSkin.webp" alt="VALORANT"></a>
+        <div class="teams__container">
+            <div class="teams__team" data-aos="fade-up" data-aos-duration="1000">
+                <a href="./valorant.html"><img src="../assets/backgrounds/VALORANT_Jett_Dark.jpg" alt="Valorant Team"></a>
+            </div>
+            <div class="teams__team" data-aos="fade-up" data-aos-duration="1500">
+                <a href="./counter-strike.html"><img src="../assets/backgrounds/csgo-bg.jpg" alt="Counter-Strike: Global Offensive Team"></a>
+            </div>
+            <div class="teams__team" data-aos="fade-up" data-aos-duration="2000">
+                <a href="./league-of-legends.html"><img src="../assets/backgrounds/Jinx_ArcaneSkin.webp" alt="League of Legends Team"></a>
+            </div>
         </div>
     </main>
     <footer>
         <p>©2023 2saucy All Rights Reserved</p>
     </footer>
+
+    <!-- AOS Init -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

@@ -1,12 +1,25 @@
 .teams{
-    @include flexbox($direction:column, $justify:center, $align-i:center);
-    @include bg-image($url: "../assets/backgrounds/aleksandr-popov-3InMDrsuYrk-unsplash.jpg");
+    @include flexbox($direction: column, $justify: space-evenly);
+    @include bg-image($url: "../assets/backgrounds/27097.jpg");
     padding: 2rem;
 
-    div{
-        height: 200px;
-        width: 100%;
+    &__text-content{
+        h1{
+            color: $color-white;
+            span{
+                color: red;
+            }
+        }
+        p{
+            color: rgb(229, 228, 228)
+        }
+    }
 
+    &__container{
+        @include flexbox($direction: column, $justify:center);
+    }
+
+    &__team{
         img{
             filter: grayscale(100%);
             border-radius: .5rem;
@@ -24,10 +37,16 @@
     }
 
     @include desktop{
-        flex-direction: row;
-        div{
-            height: 600px;
-            width: 200px;
+
+        &__container{
+            flex-direction: row;
+        }
+
+        &__team{
+            img{
+                height: 550px;
+                width: 320px;
+            }
         }
     }
 }
