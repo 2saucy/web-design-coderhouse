@@ -10,12 +10,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <title>Team</title>
 </head>
 <body>
     <header class="header">
-        <a href="../index.html"><img class="header__logotype" src="../assets/logos/l1-logo.png"> </a>
+        <a href="../index.html"><img class="header__logotype" src="../assets/logos/l1-logo.png"  alt="Legit One Logo"></a>
         <nav class="header__nav">
             <ul class="header__nav-list">
                 <li class="header__nav-item"><a href="../index.html">Home</a></li>
@@ -57,7 +59,7 @@
                         <a href="#"><img src="../assets/social/instagram.svg" alt="instagram"></a>
                     </div>
                 </div>
-                <div class="player-card">
+                <div class="player-card" data-aos="fade-right">
                     <div class="player-card__player-info">
                         <img class="player-card__player-info--image" src="../assets/players/s1mple.png" alt="Player image">
                         <div>
@@ -73,7 +75,7 @@
                         <img src="../assets/social/instagram.svg" alt="instagram">
                     </div>
                 </div>
-                <div class="player-card">
+                <div class="player-card" data-aos="fade-right">
                     <div class="player-card__player-info">
                         <img class="player-card__player-info--image" src="../assets/players/s1mple.png" alt="Player image">
                         <div>
@@ -89,7 +91,7 @@
                         <img src="../assets/social/instagram.svg" alt="instagram">
                     </div>
                 </div>
-                <div class="player-card">
+                <div class="player-card" data-aos="fade-right">
                     <div class="player-card__player-info">
                         <img class="player-card__player-info--image" src="../assets/players/s1mple.png" alt="Player image">
                         <div>
@@ -105,7 +107,7 @@
                         <img src="../assets/social/instagram.svg" alt="instagram">
                     </div>
                 </div>
-                <div class="player-card">
+                <div class="player-card" data-aos="fade-right">
                     <div class="player-card__player-info">
                         <img class="player-card__player-info--image" src="../assets/players/s1mple.png" alt="Player image">
                         <div>
@@ -122,7 +124,7 @@
                     </div>
                 </div>
                 <h2>Staff</h2>
-                <div class="player-card">
+                <div class="player-card" data-aos="fade-right">
                     <div class="player-card__player-info">
                         <img class="player-card__player-info--image" src="../assets/players/s1mple.png" alt="Player image">
                         <div>
@@ -138,7 +140,7 @@
                         <img src="../assets/social/instagram.svg" alt="instagram">
                     </div>
                 </div>
-                <div class="player-card">
+                <div class="player-card" data-aos="fade-right">
                     <div class="player-card__player-info">
                         <img class="player-card__player-info--image" src="../assets/players/s1mple.png" alt="Player image">
                         <div>
@@ -168,7 +170,7 @@
                     </div>          
                 </div>
                 <h2>Past Games</h2>
-                <div class="game-card">
+                <div class="game-card" data-aos="fade-up">
                     <div class="game-card__content">
                       <p class="game-card__content--match">Legit Ones vs Cloud9</p>
                       <p class="game-card__content--info"><span>VCT Champions Tournament</span><br>13:50hs - 15 Apr 2023</p>
@@ -178,7 +180,7 @@
                       <img class="game-card__logos--their-team" src="../assets/logos/c9-logo.png" alt="Cloud9 Logo">
                     </div>          
                 </div>
-                <div class="game-card">
+                <div class="game-card" data-aos="fade-up">
                     <div class="game-card__content">
                       <p class="game-card__content--match">Legit Ones vs Kru Esports</p>
                       <p class="game-card__content--info"><span>VCT Champions Tournament</span><br>11:45hs - 11 Apr 2023</p>
@@ -188,7 +190,7 @@
                       <img class="game-card__logos--their-team" src="../assets/logos/kru-logo.png" alt="Kru Esports Logo">
                     </div>          
                 </div>
-                <div class="game-card">
+                <div class="game-card" data-aos="fade-up">
                     <div class="game-card__content">
                       <p class="game-card__content--match">Legit Ones vs Team Liquid</p>
                       <p class="game-card__content--info"><span>VCT Champions Tournament</span><br>10:30hs - 08 Apr 2023</p>
@@ -198,7 +200,7 @@
                       <img class="game-card__logos--their-team" src="../assets/logos/team-liquid-logo.svg" alt="Team Liquid Logo">
                     </div>          
                 </div>
-                <div class="game-card">
+                <div class="game-card" data-aos="fade-up">
                     <div class="game-card__content">
                       <p class="game-card__content--match">Legit Ones vs G2 Esports</p>
                       <p class="game-card__content--info"><span>VCT Champions Tournament</span><br>16:45hs - 03 Apr 2023</p>
@@ -208,7 +210,7 @@
                       <img class="game-card__logos--their-team" src="../assets/logos/g2-logo.png" alt="G2 Esports Logo">
                     </div>          
                 </div>
-                <div class="game-card">
+                <div class="game-card" data-aos="fade-up">
                     <div class="game-card__content">
                       <p class="game-card__content--match">Legit Ones vs Sentinels</p>
                       <p class="game-card__content--info"><span>VCT Champions Tournament</span><br>13:45hs - 02 Apr 2023</p>
@@ -224,5 +226,11 @@
     <footer>
         <p>©2023 2saucy All Rights Reserved</p>
     </footer>
+
+    <!-- AOS Init -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>
