@@ -20,6 +20,9 @@
             font-weight: $fw-600;
             text-transform: uppercase;
         }
+        p{
+            font-family: $ff-serif
+        }
     }
     &__social-media{
         @include flexbox();

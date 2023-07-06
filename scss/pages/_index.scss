@@ -6,20 +6,30 @@
 
     &__title{
         font-size: 2em;
+        font-weight: $fw-600;
+        span{
+            font-family: $ff-serif;
+            font-weight: $fw-900;
+        }
     }
     &__description{
+        font-family: $ff-serif;
+        font-weight: $fw-400;
         font-size: 1em;
     }
     &__button{
-        cursor: pointer;
         background-color: #ff198f;
         color: $color-white;
         font-size: 1em;
         font-weight: $fw-600;
-        border: none;
         border-radius: $border-radius;
         padding: 1rem 2rem;
         width: fit-content;
+        transition: .5s ease;
+
+        &:hover{
+            background-color: $color-dark-blue;
+        }
     }
 
     @include desktop{
@@ -29,12 +39,11 @@
         }
         &__description{
             font-size: 1.3em;
-            width: 50%;
+            width: 60%;
         }
     }
 }
 
 .sponsors{
-    @include flexbox($justify: center, $align-i: center, $wrap: wrap);
     padding: $padding;
 }

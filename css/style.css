@@ -124,7 +124,7 @@ footer {
 }
 @media screen and (min-width: 55em) {
   .player-card {
-    min-width: 50vw;
+    min-width: 40vw;
   }
   .player-card__player-info--role {
     font-size: 1em;
@@ -138,10 +138,6 @@ footer {
   .player-card__player-info--country-flag {
     width: 24px;
   }
-}
-
-.tw path:hover {
-  fill: red;
 }
 
 .game-card {
@@ -163,6 +159,9 @@ footer {
   font-size: 16px;
   font-family: "Roboto Slab", serif;
 }
+.game-card__content span {
+  font-weight: 600;
+}
 .game-card__logos {
   display: flex;
   align-items: center;
@@ -171,6 +170,62 @@ footer {
 }
 .game-card__logos--our-team, .game-card__logos--their-team {
   width: 80px;
+}
+
+.upcoming-game {
+  background-color: rgb(245, 245, 245);
+}
+.upcoming-game .game-card__content--match {
+  color: #001C30;
+}
+.upcoming-game .game-card__content--info {
+  color: #868686;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1750px);
+  }
+}
+.slider {
+  background: white;
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.slider::before, .slider::after {
+  background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider .slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: 3500px;
+}
+.slider .slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 250px;
 }
 
 /*********** Index.html ***********/
@@ -188,20 +243,29 @@ footer {
 }
 .home__title {
   font-size: 2em;
+  font-weight: 600;
+}
+.home__title span {
+  font-family: "Roboto Slab", serif;
+  font-weight: 900;
 }
 .home__description {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
   font-size: 1em;
 }
 .home__button {
-  cursor: pointer;
   background-color: #ff198f;
   color: #ffffff;
   font-size: 1em;
   font-weight: 600;
-  border: none;
   border-radius: 2rem;
   padding: 1rem 2rem;
   width: fit-content;
+  transition: 0.5s ease;
+}
+.home__button:hover {
+  background-color: #001C30;
 }
 @media screen and (min-width: 55em) {
   .home__title {
@@ -210,16 +274,11 @@ footer {
   }
   .home__description {
     font-size: 1.3em;
-    width: 50%;
+    width: 60%;
   }
 }
 
 .sponsors {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
   padding: 2rem;
 }
 
@@ -250,6 +309,9 @@ footer {
   font-size: 0.9em;
   font-weight: 600;
   text-transform: uppercase;
+}
+.contact__info-box p {
+  font-family: "Roboto Slab", serif;
 }
 .contact__social-media {
   display: flex;
