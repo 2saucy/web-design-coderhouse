@@ -1,49 +1,71 @@
 .home{
-    @include flexbox($direction: column, $justify: center);
-    @include bg-image($url: "../assets/backgrounds/fondito.jpg");
-    padding: $padding;
-    color: $color-white;
 
-    &__title{
-        font-size: 2em;
-        font-weight: $fw-600;
-        span{
-            font-family: $ff-serif;
-            font-weight: $fw-900;
-        }
+    @include flexbox($direction: column, $gap: 0);
+
+    video{
+        position: relative;
+        min-height: 100vh;
+        object-fit: cover;
     }
-    &__description{
-        font-family: $ff-serif;
-        font-weight: $fw-400;
-        font-size: 1em;
-    }
-    &__button{
-        background-color: #ff198f;
+
+    &__text-content{
+        @include flexbox($direction: column, $align-i: center);
+        padding: $padding;
+        position: absolute;
+        z-index: 1500;
+        top: 25%;
         color: $color-white;
-        font-size: 1em;
-        font-weight: $fw-600;
-        border-radius: $border-radius;
-        padding: 1rem 2rem;
-        width: fit-content;
-        transition: .5s ease;
 
-        &:hover{
-            background-color: $color-dark-blue;
+        &--title{
+            text-align: center;
+            font-family: $ff-serif;
+            font-size: $fs-32;
+            text-transform: uppercase;
+            span{
+                font-weight: $fw-900;
+                color: rgb(237, 160, 92);
+            }
         }
+        &--desc{
+            font-family: $ff-serif;
+            font-size: $fs-16;
+        }
+        &--btn{
+            background-color: #ff198f;
+            color: $color-white;
+            font-size: $fs-16;
+            font-weight: $fw-600;
+            border-radius: $border-radius;
+            padding: 1rem 2rem;
+            transition: .5s ease;
+    
+            &:hover{
+                background-color: $color-dark-blue;
+            }
+        }
+    }
+
+    &__sponsors{
+        padding: $padding;
     }
 
     @include desktop{
-        &__title{
-            font-size: 2.5em;
-            width: 50%;
+        video{
+            width: 100vw;
         }
-        &__description{
-            font-size: 1.3em;
-            width: 60%;
+        &__text-content{
+            align-items: flex-start;
+            top: 25%;
+
+            &--title{
+                text-align: start;
+                font-size: $fs-58;
+                width: 50%;
+            }
+            &--desc{
+                font-size: $fs-28;
+                width: 50%;
+            }
         }
     }
-}
-
-.sponsors{
-    padding: $padding;
 }

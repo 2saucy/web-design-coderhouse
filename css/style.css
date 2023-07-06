@@ -228,54 +228,70 @@ footer {
 .home {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 0;
+}
+.home video {
+  position: relative;
+  min-height: 100vh;
+  object-fit: cover;
+}
+.home__text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 2rem;
-  background-image: url("../assets/backgrounds/fondito.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   padding: 2rem;
+  position: absolute;
+  z-index: 1500;
+  top: 25%;
   color: #ffffff;
 }
-.home__title {
+.home__text-content--title {
+  text-align: center;
+  font-family: "Roboto Slab", serif;
   font-size: 2em;
-  font-weight: 600;
+  text-transform: uppercase;
 }
-.home__title span {
-  font-family: "Roboto Slab", serif;
+.home__text-content--title span {
   font-weight: 900;
+  color: rgb(237, 160, 92);
 }
-.home__description {
+.home__text-content--desc {
   font-family: "Roboto Slab", serif;
-  font-weight: 400;
   font-size: 1em;
 }
-.home__button {
+.home__text-content--btn {
   background-color: #ff198f;
   color: #ffffff;
   font-size: 1em;
   font-weight: 600;
   border-radius: 2rem;
   padding: 1rem 2rem;
-  width: fit-content;
   transition: 0.5s ease;
 }
-.home__button:hover {
+.home__text-content--btn:hover {
   background-color: #001C30;
 }
+.home__sponsors {
+  padding: 2rem;
+}
 @media screen and (min-width: 55em) {
-  .home__title {
-    font-size: 2.5em;
+  .home video {
+    width: 100vw;
+  }
+  .home__text-content {
+    align-items: flex-start;
+    top: 25%;
+  }
+  .home__text-content--title {
+    text-align: start;
+    font-size: 3.625em;
     width: 50%;
   }
-  .home__description {
-    font-size: 1.3em;
-    width: 60%;
+  .home__text-content--desc {
+    font-size: 1.75em;
+    width: 50%;
   }
-}
-
-.sponsors {
-  padding: 2rem;
 }
 
 /*********** Contact.html ***********/
