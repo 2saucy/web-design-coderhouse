@@ -28,10 +28,6 @@ main {
   margin-top: 80px;
 }
 
-.logo {
-  width: 80px;
-}
-
 /*********** Components ***********/
 .header {
   display: flex;
@@ -293,42 +289,46 @@ footer {
   padding: 2rem;
 }
 .contact__content {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
   background-color: #ffffff;
   padding: 2rem;
   border-radius: 2rem;
   min-width: 100%;
 }
 .contact__title {
+  font-size: 2em;
   margin-bottom: 2rem;
 }
-.contact__info-box h3 {
+.contact__text-content h3, .contact__text-content p {
+  font-size: 0.875em;
+}
+.contact__text-content h3 {
   color: #868686;
-  font-size: 0.9em;
   font-weight: 600;
   text-transform: uppercase;
 }
-.contact__info-box p {
+.contact__text-content p {
   font-family: "Roboto Slab", serif;
+  margin-bottom: 1.5rem;
 }
 .contact__social-media {
   display: flex;
   gap: 2rem;
+  padding: 1rem 0;
 }
-.contact__sponsors-title, .contact__partners-title {
+.contact__partners--title, .contact__sponsors--title {
+  margin-top: 1rem;
   font-size: 1em;
 }
-.contact__sponsors-section, .contact__partners-section {
+.contact__partners--container, .contact__sponsors--container {
   display: flex;
   align-items: center;
   gap: 2rem;
   flex-wrap: wrap;
 }
 .contact__map {
+  margin-top: 2rem;
   max-height: 200px;
-  width: auto;
+  width: 100%;
 }
 .contact__banner {
   display: none;
@@ -338,9 +338,11 @@ footer {
     padding: 0;
     background-image: none;
   }
+  .contact__content, .contact__banner {
+    width: 50vw;
+  }
   .contact__content {
     min-height: 100vh;
-    width: 50%;
     border-radius: 0;
     min-width: 0;
   }
@@ -350,7 +352,6 @@ footer {
     background-size: cover;
     background-position: center;
     display: block;
-    width: 50%;
   }
 }
 
@@ -458,25 +459,25 @@ footer {
   }
 }
 
-/*********** Valorant.html ***********/
+/*********** Valorant.html, Counter-strike.html & League-of-legends-html ***********/
 .game__banner {
   height: 200px;
   position: relative;
 }
 .game__banner--lol {
-  background-image: url("../assets/backgrounds/lol-banner.jpg");
+  background-image: url("../assets/backgrounds/lol-banner.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 .game__banner--valorant {
-  background-image: url("../assets/backgrounds/VbTJ9MN.png");
+  background-image: url("../assets/backgrounds/valorant-banner.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 .game__banner--csgo {
-  background-image: url("../assets/backgrounds/csgo-banner.jpg");
+  background-image: url("../assets/backgrounds/csgo-banner.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
