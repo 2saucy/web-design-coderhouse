@@ -1,6 +1,5 @@
 .game{
     &__banner{
-        
         &--lol{
             @include bg-image($url: "../assets/backgrounds/lol-banner.png");
         }
@@ -10,7 +9,6 @@
         &--csgo{
             @include bg-image($url: "../assets/backgrounds/csgo-banner.jpeg");
         }
-
         height: 200px;
         position: relative;
     }
@@ -25,20 +23,17 @@
     }
 
     &__content{
-        margin-top: 4rem;
         padding: 2rem;
 
         &--title{
-            font-size: 1.5em;
+            font-size: $fs-32;
             text-transform: uppercase;
-            font-weight: bold;
-            margin-bottom: 2rem;
+            margin: 4rem 0 2rem 0;
         }
         &--description{
             font-family: $ff-serif;
             color: $color-dark-blue;
-            font-size: 1em;
-            line-height: 30px;
+            font-size: $fs-28;
             max-width: 767px;
         }
         &--video{
