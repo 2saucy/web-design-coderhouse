@@ -1,0 +1,444 @@
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+main {
+  min-height: 100vh;
+  margin-top: 80px;
+}
+
+.logo {
+  width: 80px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  z-index: 2000;
+  min-width: 100%;
+  padding-right: 20px;
+}
+.header__logotype {
+  width: 80px;
+  margin-top: 0.5rem;
+}
+.header__nav-list {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.7em;
+}
+.header__nav-item a {
+  color: #001C30;
+}
+.header__nav-item a:hover {
+  font-weight: 600;
+}
+@media screen and (min-width: 1024px) {
+  .header__nav-list {
+    font-size: 1em;
+  }
+}
+
+footer {
+  text-align: center;
+  background-color: rgb(24, 24, 24);
+  color: #ffffff;
+  padding: 2rem;
+}
+
+.player-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  box-shadow: 0 0 0.9rem 0.1rem rgb(243, 243, 243);
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.player-card__player-info {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.player-card__player-info--image {
+  width: 90px;
+}
+.player-card__player-info--role {
+  font-family: "Roboto Slab", serif;
+  font-size: 14px;
+  color: #979797;
+}
+.player-card__player-info--nickname {
+  font-size: 20px;
+  font-weight: bold;
+  color: #020202;
+}
+.player-card__player-info--realname {
+  font-size: 14px;
+  color: #020202;
+}
+.player-card__player-info--country-flag {
+  width: 24px;
+}
+.player-card__social-media {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media screen and (min-width: 55em) {
+  .player-card {
+    min-width: 50vw;
+  }
+  .player-card__player-info--role {
+    font-size: 16px;
+  }
+  .player-card__player-info--nickname {
+    font-size: 24px;
+  }
+  .player-card__player-info--realname {
+    font-size: 16px;
+  }
+  .player-card__player-info--country-flag {
+    width: 24px;
+  }
+}
+
+.game-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  background-color: #242424;
+  padding: 2.5rem 1.8rem;
+  margin-bottom: 1rem;
+}
+.game-card__content--match {
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: bold;
+}
+.game-card__content--info {
+  color: #90EBFF;
+  font-size: 16px;
+  font-family: "Roboto Slab", serif;
+}
+.game-card__logos {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.game-card__logos--our-team, .game-card__logos--their-team {
+  width: 80px;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  background-image: url("../assets/backgrounds/fondito.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+  color: #ffffff;
+}
+.home__title {
+  font-size: 2em;
+}
+.home__description {
+  font-size: 1em;
+}
+.home__button {
+  cursor: pointer;
+  background-color: #ff198f;
+  color: #ffffff;
+  font-size: 1em;
+  font-weight: 600;
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  width: fit-content;
+}
+@media screen and (min-width: 55em) {
+  .home__title {
+    font-size: 2.5em;
+    width: 50%;
+  }
+  .home__description {
+    font-size: 1.3em;
+    width: 50%;
+  }
+}
+
+.sponsors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+.contact {
+  display: flex;
+  gap: 2rem;
+  background-image: url("../assets/backgrounds/maurice-sahl.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+}
+.contact__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 2rem;
+  min-width: 100%;
+}
+.contact__title {
+  margin-bottom: 2rem;
+}
+.contact__info-box h3 {
+  color: #868686;
+  font-size: 0.9em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.contact__social-media {
+  display: flex;
+  gap: 2rem;
+}
+.contact__sponsors-title, .contact__partners-title {
+  font-size: 1em;
+}
+.contact__sponsors-section, .contact__partners-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.contact__map {
+  max-height: 200px;
+  width: auto;
+}
+.contact__banner {
+  display: none;
+}
+@media screen and (min-width: 55em) {
+  .contact {
+    padding: 0;
+    background-image: none;
+  }
+  .contact__content {
+    min-height: 100vh;
+    width: 50%;
+    border-radius: 0;
+    min-width: 0;
+  }
+  .contact__banner {
+    background-image: url("../assets/backgrounds/maurice-sahl.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: block;
+    width: 50%;
+  }
+}
+
+.about-us {
+  display: flex;
+  gap: 2rem;
+  background-image: url("../assets/backgrounds/tony-reid.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+}
+.about-us__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 2rem;
+  min-width: 100%;
+}
+.about-us__title {
+  margin-bottom: 2rem;
+}
+.about-us__description p {
+  font-family: "Roboto Slab", serif;
+}
+.about-us__video {
+  margin-top: 2rem;
+  width: auto;
+}
+.about-us__banner {
+  display: none;
+}
+@media screen and (min-width: 55em) {
+  .about-us {
+    padding: 0;
+    background-image: none;
+  }
+  .about-us__content {
+    min-height: 100vh;
+    width: 50%;
+    border-radius: 0;
+    min-width: 0;
+  }
+  .about-us__banner {
+    display: block;
+    background-image: url("../assets/backgrounds/tony-reid.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+  }
+}
+
+.valorant__banner {
+  background-image: url(../assets/backgrounds/VbTJ9MN.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  position: relative;
+}
+.valorant__circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-color: rgb(187, 187, 187);
+  border-radius: 50%;
+  width: 120px;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.valorant__circle--logo {
+  width: 120px;
+}
+.valorant__content {
+  margin-top: 4rem;
+  padding: 2rem;
+}
+.valorant__content--title {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+.valorant__content--description {
+  font-family: "Roboto Slab", serif;
+  color: #363636;
+  font-size: 16px;
+  line-height: 30px;
+  max-width: 767px;
+}
+.valorant__content--video {
+  margin-top: 2rem;
+  width: 100%;
+}
+.valorant__team-matches-container {
+  padding: 2rem;
+}
+.valorant__team h2, .valorant__matches h2 {
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 55em) {
+  .valorant__circle {
+    top: 100%;
+    left: 10%;
+  }
+  .valorant__content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 0;
+  }
+  .valorant__content--video {
+    width: 700px;
+  }
+  .valorant__team-matches-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
+  }
+}
+
+.teams {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-image: url("../assets/backgrounds/aleksandr-popov-3InMDrsuYrk-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+}
+.teams div {
+  height: 200px;
+  width: 100%;
+}
+.teams div img {
+  filter: grayscale(100%);
+  border-radius: 0.5rem;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.teams div img:hover {
+  filter: none;
+  box-shadow: 0 0 2rem 0.1rem rgba(255, 1, 242, 0.39);
+  transform: scale(1.02);
+  transition: 0.5s ease;
+}
+@media screen and (min-width: 55em) {
+  .teams {
+    flex-direction: row;
+  }
+  .teams div {
+    height: 600px;
+    width: 200px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

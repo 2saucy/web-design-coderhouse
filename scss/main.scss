@@ -1,24 +1,14 @@
-/*********** Reset ***********/
-@import "./base";
 
-/*********** Components ***********/
-@import "./components/header";
-@import "./components/footer";
+@import "./base/base";
+
+@import "./layout/header";
+@import "./layout/footer";
+
 @import "./components/player-card";
 @import "./components/game-card";
 
-
-/*********** Index.html ***********/
 @import "./pages/index";
-
-/*********** Contact.html ***********/
 @import "./pages/contact";
-
-/*********** About-us.html ***********/
 @import "./pages/about-us";
-
-/*********** Teams.html ***********/
 @import "./pages/teams";
-
-/*********** Valorant.html ***********/
 @import "./pages/valorant";
