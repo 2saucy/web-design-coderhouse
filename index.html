@@ -10,13 +10,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&family=Roboto+Slab:wght@400;600;900&display=swap" rel="stylesheet">
-
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <title>Legit Ones Official</title>
 </head>
 <body>
     <header class="header">
-        <a href="./index.html"><img class="header__logotype" src="../assets/logos/logo-header.png"> </a>
+        <a href="./index.html"><img class="header__logotype" src="../assets/logos/l1-logo.png" alt="Legit One Logo"></a>
         <nav class="header__nav">
             <ul class="header__nav-list">
                 <li class="header__nav-item"><a href="./index.html">Home</a></li>
@@ -27,19 +28,59 @@
         </nav>
     </header>
     <main class="home">
-        <h1 class="home__title">Taking the game to a legit level</h1>
-        <p class="home__description">Te invitamos a descubrir nuestros enfrentamientos más emocionantes, donde nuestro equipo ha demostrado su destreza y estrategia en los juegos más desafiantes del momento. Ya sea que busques estudiar nuestras tácticas, aprender de nuestros jugadores estrella o simplemente disfrutar de la adrenalina de una competencia de alto nivel, nuestros últimos partidos te llevarán al corazón de la acción.</p>
-        <button class="home__button">VIEW MATCHES</button>
+        <video autoplay loop muted>
+            <source src="./assets/backgrounds/index-vid.mp4" type="video/mp4">
+        </video>
+        <div class="home__text-content">
+            <h1 class="home__text-content--title" data-aos="fade-right" data-aos-easing="ease" data-aos-duration="1000">Welcome to the<br><span>Legit Ones</span></h1>
+            <p class="home__text-content--desc" data-aos="fade-right" data-aos-duration="3000">Experience the competitive excellence of an unstoppable esports team, leading the scene with skill, passion, and unparalleled victories</p>
+            <a class="home__text-content--btn" data-aos="fade-right" data-aos-duration="3000" href="./views/teams.html">OUR TEAMS</a>
+        </div>
+        <div class="home__sponsors">
+            <div class="slider">
+                <div class="slide-track">
+                    <div class="slide">
+                        <a href="https://www.nike.com.ar/" target="_blank"><img src="./assets/logos/nike-logo.png" width="120" alt="Nike Logo"></a>
+                    </div>
+                    <div class="slide">
+                        <a href="https://ar.puma.com/" target="_blank"><img src="./assets/logos/puma-logo.png" width="120" alt="Puma Logo"></a>
+                    </div>
+                    <div class="slide">
+                        <a href="https://www.logitechstore.com.ar/" target="_blank"><img src="./assets/logos/logitech-logo.png" width="120" alt="Logitech Logo"></a>
+                    </div>
+                    <div class="slide">
+                        <a href="https://www.disneylatino.com/" target="_blank"><img src="./assets/logos/disney-logo.png" width="120" alt="Disney Logo"></a>
+                    </div>
+                    <div class="slide">
+                        <a href="https://www.riotgames.com/es" target="_blank"><img src="./assets/logos/riot-games-logo.png" width="120" alt="Riot Games Logo"></a>
+                    </div>
+                    <div class="slide">
+                        <a href="https://www.nike.com.ar/" target="_blank"><img src="./assets/logos/nike-logo.png" width="120" alt="Nike Logo"></a>
+                    </div>
+                    <div class="slide">
+                        <a href="https://ar.puma.com/" target="_blank"><img src="./assets/logos/puma-logo.png" width="120" alt="Puma Logo"></a>
+                    </div>
+                    <div class="slide">
+                        <a href="https://www.logitechstore.com.ar/" target="_blank"><img src="./assets/logos/logitech-logo.png" width="120" alt="Logitech Logo"></a>
+                    </div>
+                    <div class="slide">
+                        <a href="https://www.disneylatino.com/" target="_blank"><img src="./assets/logos/disney-logo.png" width="120" alt="Disney Logo"></a>
+                    </div>
+                    <div class="slide">
+                        <a href="https://www.riotgames.com/es" target="_blank"><img src="./assets/logos/riot-games-logo.png" width="120" alt="Riot Games Logo"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
-    <div class="sponsors">
-        <img class="logo" src="./assets/logos/nike-logo.png" alt="nike">
-        <img class="logo" src="./assets/logos/puma-logo.png" alt="puma">
-        <img class="logo" src="./assets/logos/logitech-logo.png" alt="logitech">
-        <img class="logo" src="./assets/logos/riot-games-logo.png" alt="riot-games">
-        <img class="logo" src="./assets/logos/disney-logo.png" alt="disney">
-    </div>
     <footer>
         <p>©2023 2saucy All Rights Reserved</p>
     </footer>
+
+    <!-- AOS Init -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

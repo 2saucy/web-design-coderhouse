@@ -1,17 +1,19 @@
-$color-white: #ffffff;
-$color-dark-blue: #001C30;
-$color-light-gray: #868686;
-
 $ff-sans: 'Montserrat', sans-serif;
 $ff-serif: 'Roboto Slab', serif;
-
 $fw-400: 400;
 $fw-600: 600;
 $fw-900: 900;
-
+$fs-16: 1em;
+$fs-28: 1.75em;
+$fs-32: 2em;
+$fs-58: 3.625em;
+$fs-100: 6.25em;
+$color-white: #ffffff;
+$color-dark-blue: #001C30;
+$color-light-gray: #868686;
+$color-dark-gray: #181818;
 $padding: 2rem !default;
 $border-radius: 2rem !default;
-$flex-gap: 2rem !default;
 
 *{
     font-family: $ff-sans;
@@ -42,11 +44,7 @@ main{
     margin-top: 80px;
 }
 
-.logo{
-    width: 80px;
-}
-
-@mixin flexbox($direction: none, $justify: none, $align-i: none, $align-c: none, $gap: $flex-gap, $wrap: none){
+@mixin flexbox($direction: none, $justify: none, $align-i: none, $align-c: none, $gap: 2rem, $wrap: none){
     display: flex;
     @if $direction != none {
         flex-direction: $direction;
@@ -67,23 +65,23 @@ main{
         flex-wrap: $wrap;
     }
 }
-
+@mixin grid-container($columns, $gap: 2rem){
+    display: grid;
+    grid-template-columns: $columns;
+    gap: $gap;
+}
 @mixin bg-image($url, $repeat: no-repeat, $size: cover, $position: center){
     background-image: url($url);
     background-repeat: $repeat;
     background-size: $size;
     background-position: $position;
 }
-
 @mixin circle($width: none, $bg-color: none){
     background-color: $bg-color;
     border-radius: 50%;
     width: $width;
     aspect-ratio: 1;
-    
-    
 }
-
 @mixin desktop(){
     @media screen and (min-width: 55em){
         @content

@@ -10,12 +10,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <title>Legit Ones · Games</title>
+    <title>Legit Ones · Our Teams</title>
 </head>
 <body>
     <header class="header">
-        <a href="../index.html"><img class="header__logotype" src="../assets/logos/logo-header.png"> </a>
+        <a href="../index.html"><img class="header__logotype" src="../assets/logos/l1-logo.png" alt="Legit One Logo"></a>
         <nav class="header__nav">
             <ul class="header__nav-list">
                 <li class="header__nav-item"><a href="../index.html">Home</a></li>
@@ -26,18 +28,45 @@
         </nav>
     </header>
     <main class="teams">
-        <div>
-            <a href="./valorant.html"><img src="../assets/backgrounds/VALORANT_Jett_Dark.jpg" alt="VALORANT"></a>
+        <div class="teams__text-content">
+            <h1 data-aos="fade-down" data-aos-duration="1000">Meet our <span>PROS</span></h1>
+            <p data-aos="fade-down" data-aos-duration="1000">Discover our talented professional gaming teams in action and be amazed by their skills in the gaming world.</p>
         </div>
-        <div>
-            <a href="#"><img src="../assets/backgrounds/csgo-bg.jpg" alt="VALORANT"></a>
-        </div>
-        <div>
-            <a href="#"><img src="../assets/backgrounds/Jinx_ArcaneSkin.webp" alt="VALORANT"></a>
+        <div class="teams__container">
+            <div class="teams__team" data-aos="fade-up" data-aos-duration="1000">
+                <a href="./valorant.html"><img src="../assets/backgrounds/valorant-card.png" alt="Valorant Team"></a>
+            </div>
+            <div class="teams__team" data-aos="fade-up" data-aos-duration="1000">
+                <a href="./counter-strike.html"><img src="../assets/backgrounds/csgo-bg.jpg" alt="Counter-Strike: Global Offensive Team"></a>
+            </div>
+            <div class="teams__team" data-aos="fade-up" data-aos-duration="1000">
+                <a href="./league-of-legends.html"><img src="../assets/backgrounds/lol-card.png" alt="League of Legends Team"></a>
+            </div>
+            <div class="teams__team" data-aos="fade-up" data-aos-duration="1000">
+                <a href="./valorant.html"><img src="../assets/backgrounds/valorant-card.png" alt="Valorant Team"></a>
+            </div>
+            <div class="teams__team" data-aos="fade-up" data-aos-duration="1000">
+                <a href="./valorant.html"><img src="../assets/backgrounds/valorant-card.png" alt="Valorant Team"></a>
+            </div>
+            <div class="teams__team" data-aos="fade-up" data-aos-duration="1000">
+                <a href="./counter-strike.html"><img src="../assets/backgrounds/csgo-bg.jpg" alt="Counter-Strike: Global Offensive Team"></a>
+            </div>
+            <div class="teams__team" data-aos="fade-up" data-aos-duration="1000">
+                <a href="./league-of-legends.html"><img src="../assets/backgrounds/lol-card.png" alt="League of Legends Team"></a>
+            </div>
+            <div class="teams__team" data-aos="fade-up" data-aos-duration="1000">
+                <a href="./valorant.html"><img src="../assets/backgrounds/valorant-card.png" alt="Valorant Team"></a>
+            </div>
         </div>
     </main>
     <footer>
         <p>©2023 2saucy All Rights Reserved</p>
     </footer>
+
+    <!-- AOS Init -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
