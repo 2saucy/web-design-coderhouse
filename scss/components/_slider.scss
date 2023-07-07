@@ -52,6 +52,16 @@ $animationSpeed: 40s;
         align-items: center;
         justify-content: center;
 		height: 100px;
-		width: 250px;
+		width: 150px;
+	}
+
+	&:hover .slide-track{
+		animation-play-state: paused;
+	}
+
+	@include desktop{
+		.slide{
+			width: 250px;
+		}
 	}
 }

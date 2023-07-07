@@ -221,7 +221,15 @@ footer {
   align-items: center;
   justify-content: center;
   height: 100px;
-  width: 250px;
+  width: 150px;
+}
+.slider:hover .slide-track {
+  animation-play-state: paused;
+}
+@media screen and (min-width: 55em) {
+  .slider .slide {
+    width: 250px;
+  }
 }
 
 /*********** Index.html ***********/
@@ -427,51 +435,61 @@ footer {
 
 /*********** Teams.html ***********/
 .teams {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  gap: 2rem;
-  background-image: url("../assets/backgrounds/27097.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   padding: 2rem;
 }
-.teams__text-content h1 {
-  color: #ffffff;
-}
-.teams__text-content h1 span {
-  color: red;
-}
-.teams__text-content p {
-  color: rgb(229, 228, 228);
-}
-.teams__container {
+.teams__text-content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 0 5rem 0;
+}
+.teams__text-content h1 {
+  color: #001C30;
+  font-size: 2em;
+}
+.teams__text-content h1 span {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  color: rgb(251, 75, 128);
+}
+.teams__text-content p {
+  font-size: 1em;
+  font-family: "Roboto Slab", serif;
+  color: #868686;
+}
+.teams__container {
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 2rem;
 }
 .teams__team img {
   filter: grayscale(100%);
   border-radius: 0.5rem;
   object-fit: cover;
-  width: 100%;
-  height: 100%;
+  transition: 0.5s ease;
 }
 .teams__team img:hover {
   filter: none;
-  box-shadow: 0 0 2rem 0.1rem rgba(255, 1, 242, 0.39);
-  transform: scale(1.02);
-  transition: 0.5s ease;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.56);
+  transform: scale(1.05);
 }
 @media screen and (min-width: 55em) {
+  .teams__text-content {
+    align-items: flex-start;
+  }
+  .teams__text-content h1 {
+    font-size: 3.625em;
+  }
+  .teams__text-content p {
+    font-size: 1.75em;
+    width: 60%;
+  }
   .teams__container {
-    flex-direction: row;
+    grid-template-columns: repeat(4, 1fr);
   }
   .teams__team img {
-    height: 550px;
-    width: 320px;
+    height: 420px;
   }
 }
 

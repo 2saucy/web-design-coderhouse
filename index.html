@@ -10,7 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&family=Roboto+Slab:wght@400;600;900&display=swap" rel="stylesheet">
-
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <title>Legit Ones Official</title>
 </head>
@@ -31,42 +32,42 @@
             <source src="./assets/backgrounds/index-vid.mp4" type="video/mp4">
         </video>
         <div class="home__text-content">
-            <h1 class="home__text-content--title">Welcome to the<br><span>Legit Ones</span></h1>
-            <p class="home__text-content--desc">Experience the competitive excellence of an unstoppable esports team, leading the scene with skill, passion, and unparalleled victories</p>
-            <a class="home__text-content--btn" href="./views/teams.html">OUR TEAMS</a>
+            <h1 class="home__text-content--title" data-aos="fade-right" data-aos-easing="ease" data-aos-duration="1000">Welcome to the<br><span>Legit Ones</span></h1>
+            <p class="home__text-content--desc" data-aos="fade-right" data-aos-duration="3000">Experience the competitive excellence of an unstoppable esports team, leading the scene with skill, passion, and unparalleled victories</p>
+            <a class="home__text-content--btn" data-aos="fade-right" data-aos-duration="3000" href="./views/teams.html">OUR TEAMS</a>
         </div>
         <div class="home__sponsors">
             <div class="slider">
                 <div class="slide-track">
                     <div class="slide">
-                        <img src="./assets/logos/nike-logo.png" width="120" alt="Nike Logo">
+                        <a href="https://www.nike.com.ar/" target="_blank"><img src="./assets/logos/nike-logo.png" width="120" alt="Nike Logo"></a>
                     </div>
                     <div class="slide">
-                        <img src="./assets/logos/puma-logo.png" width="120" alt="Puma Logo">
+                        <a href="https://ar.puma.com/" target="_blank"><img src="./assets/logos/puma-logo.png" width="120" alt="Puma Logo"></a>
                     </div>
                     <div class="slide">
-                        <img src="./assets/logos/logitech-logo.png" width="120" alt="Logitech Logo">
+                        <a href="https://www.logitechstore.com.ar/" target="_blank"><img src="./assets/logos/logitech-logo.png" width="120" alt="Logitech Logo"></a>
                     </div>
                     <div class="slide">
-                        <img src="./assets/logos/disney-logo.png" width="120" alt="Disney Logo">
+                        <a href="https://www.disneylatino.com/" target="_blank"><img src="./assets/logos/disney-logo.png" width="120" alt="Disney Logo"></a>
                     </div>
                     <div class="slide">
-                        <img src="./assets/logos/riot-games-logo.png" width="120" alt="Riot Games Logo">
+                        <a href="https://www.riotgames.com/es" target="_blank"><img src="./assets/logos/riot-games-logo.png" width="120" alt="Riot Games Logo"></a>
                     </div>
                     <div class="slide">
-                        <img src="./assets/logos/nike-logo.png" width="120" alt="Nike Logo">
+                        <a href="https://www.nike.com.ar/" target="_blank"><img src="./assets/logos/nike-logo.png" width="120" alt="Nike Logo"></a>
                     </div>
                     <div class="slide">
-                        <img src="./assets/logos/puma-logo.png" width="120" alt="Puma Logo">
+                        <a href="https://ar.puma.com/" target="_blank"><img src="./assets/logos/puma-logo.png" width="120" alt="Puma Logo"></a>
                     </div>
                     <div class="slide">
-                        <img src="./assets/logos/logitech-logo.png" width="120" alt="Logitech Logo">
+                        <a href="https://www.logitechstore.com.ar/" target="_blank"><img src="./assets/logos/logitech-logo.png" width="120" alt="Logitech Logo"></a>
                     </div>
                     <div class="slide">
-                        <img src="./assets/logos/disney-logo.png" width="120" alt="Disney Logo">
+                        <a href="https://www.disneylatino.com/" target="_blank"><img src="./assets/logos/disney-logo.png" width="120" alt="Disney Logo"></a>
                     </div>
                     <div class="slide">
-                        <img src="./assets/logos/riot-games-logo.png" width="120" alt="Riot Games Logo">
+                        <a href="https://www.riotgames.com/es" target="_blank"><img src="./assets/logos/riot-games-logo.png" width="120" alt="Riot Games Logo"></a>
                     </div>
                 </div>
             </div>
@@ -75,5 +76,11 @@
     <footer>
         <p>©2023 2saucy All Rights Reserved</p>
     </footer>
+
+    <!-- AOS Init -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
