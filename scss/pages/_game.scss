@@ -23,18 +23,20 @@
         left: 50%;
         transform: translate(-50%,-50%);
     }
-    &__content{   
-        &--title{
-            text-transform: uppercase;
-            margin: 4rem 0 2rem 0;
+    &__text-content{   
+        .flex-container{
+            h1{
+                text-transform: uppercase;
+                margin: 4rem 0 2rem 0;
+            }
         }
-        &--video{
+        iframe{
             min-height: 200px;
             width: 100%;
             margin-top: 2rem;
         }
     }
-    &__team-matches-container, &__content{
+    &__team-matches-container, &__text-content{
         padding: $padding;
     }
     &__team, &__matches{
@@ -48,19 +50,19 @@
             top: 100%;
             left: 10%;
         }
-        &__content{
-            margin-top: 0;
-            &--video{
-                margin-top: 0;
+        &__text-content{
+            @include flex-container($align-items: center, $gap: 2rem);
+
+            iframe{
                 height: 300px;
-                min-width: 550px;
-            }
-            .flex-container{
-                @include flex-container($align-items: start, $gap: 2rem);
+                min-width: 520px;
             }
         }
         &__team-matches-container{
             @include flex-container($justify-content: space-between, $gap:2rem);
+        }
+        &__team, &__matches{
+            width: 50%;
         }
     }
 }

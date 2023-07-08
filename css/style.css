@@ -156,9 +156,6 @@ footer {
   gap: 1rem;
 }
 @media screen and (min-width: 55em) {
-  .player-card {
-    min-width: 40vw;
-  }
   .player-card__player-info--image {
     width: 120px;
   }
@@ -190,7 +187,7 @@ footer {
 }
 
 .upcoming {
-  background-color: rgba(255, 255, 255, 0.9803921569);
+  background-color: #f5f5f5;
 }
 .upcoming .match-card__content--match {
   color: #001C30;
@@ -253,6 +250,20 @@ footer {
   }
 }
 
+.home__text-content--btn {
+  background-color: #0f0f0f;
+  color: rgba(255, 255, 255, 0.9803921569);
+  font-weight: 600;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  transition: 0.2s ease;
+}
+.home__text-content--btn:hover {
+  transform: scale(1.1);
+  background-color: rgba(255, 255, 255, 0.9803921569);
+  color: #0f0f0f;
+}
+
 .home {
   display: flex;
   flex-direction: column;
@@ -284,13 +295,6 @@ footer {
 }
 .home__text-content--desc {
   font-family: "Roboto Slab", serif;
-}
-.home__text-content--btn {
-  background-color: #ff198f;
-  color: rgba(255, 255, 255, 0.9803921569);
-  font-weight: 600;
-  border-radius: 2rem;
-  padding: 1rem 2rem;
 }
 .home__sponsors {
   padding: 2rem;
@@ -515,16 +519,16 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.game__content--title {
+.game__text-content .flex-container h1 {
   text-transform: uppercase;
   margin: 4rem 0 2rem 0;
 }
-.game__content--video {
+.game__text-content iframe {
   min-height: 200px;
   width: 100%;
   margin-top: 2rem;
 }
-.game__team-matches-container, .game__content {
+.game__team-matches-container, .game__text-content {
   padding: 2rem;
 }
 .game__team h2, .game__matches h2 {
@@ -535,23 +539,22 @@ footer {
     top: 100%;
     left: 10%;
   }
-  .game__content {
-    margin-top: 0;
-  }
-  .game__content--video {
-    margin-top: 0;
-    height: 300px;
-    min-width: 550px;
-  }
-  .game__content .flex-container {
+  .game__text-content {
     display: flex;
-    align-items: start;
+    align-items: center;
     gap: 2rem;
+  }
+  .game__text-content iframe {
+    height: 300px;
+    min-width: 520px;
   }
   .game__team-matches-container {
     display: flex;
     justify-content: space-between;
     gap: 2rem;
+  }
+  .game__team, .game__matches {
+    width: 50%;
   }
 }
 
@@ -578,6 +581,276 @@ footer {
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
+  }
+}
+.ab2__intro {
+  position: relative;
+}
+.ab2__intro img {
+  min-height: 70vh;
+  object-fit: cover;
+}
+.ab2__intro h1 {
+  color: rgba(255, 255, 255, 0.9803921569);
+  text-align: center;
+  font-size: 3rem;
+  width: 70%;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.ab2__mission-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  text-align: center;
+}
+.ab2__mission-section div h2 {
+  margin-bottom: 1rem;
+}
+.ab2__cards-archivements-container {
+  background-image: url("../assets/backgrounds/index-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+.ab2__cards-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+}
+@media screen and (min-width: 55em) {
+  .ab2__intro img {
+    min-width: 100%;
+    max-height: 600px;
+  }
+  .ab2__intro h1 {
+    text-align: start;
+    top: 30%;
+    left: 40%;
+  }
+  .ab2__mission-section {
+    text-align: start;
+    flex-direction: row;
+  }
+  .ab2__mission-section img {
+    max-width: 400px;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #181818;
+  border-radius: 1rem;
+}
+.card img {
+  border-radius: 1rem 1rem 0 0;
+  max-height: 200px;
+  object-fit: cover;
+}
+.card .content {
+  color: rgba(255, 255, 255, 0.9803921569);
+  padding: 2rem;
+}
+@media screen and (min-width: 55em) {
+  .card {
+    max-width: 350px;
+  }
+}
+
+.archivements {
+  display: flex;
+  flex-direction: column;
+  color: rgba(255, 255, 255, 0.9803921569);
+  padding: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+.archivements span {
+  color: red;
+}
+.archivements__stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.archivements div {
+  font-weight: 900;
+}
+.archivements div .number {
+  font-size: 2rem;
+}
+@media screen and (min-width: 55em) {
+  .archivements h2 {
+    margin: 5rem 0;
+    font-size: 4.2rem;
+  }
+  .archivements__stats {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .archivements div {
+    margin-bottom: 5rem;
+  }
+  .archivements div .number {
+    font-size: 4rem;
+  }
+}
+
+.overlay {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgb(0, 0, 0) 48%, rgba(0, 0, 0, 0) 89%);
+  position: absolute;
+  z-index: -1;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.text-flicker-in-glow {
+  animation: text-flicker-in-glow 4s linear both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2023-7-8 2:33:31
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+@keyframes text-flicker-in-glow {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  10.1% {
+    opacity: 1;
+    text-shadow: none;
+  }
+  10.2% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  20% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  20.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+  }
+  20.6% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  30% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  30.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  30.5% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  30.6% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  45% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  45.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  55% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  55.1% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  57% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  57.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
+  }
+  60% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
+  }
+  60.1% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  65% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  65.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+  75% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+  75.1% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  77% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  77.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+  85% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+  85.1% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  86% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  86.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
   }
 }
 

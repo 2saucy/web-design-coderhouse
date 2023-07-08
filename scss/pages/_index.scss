@@ -27,14 +27,6 @@
         &--desc{
             font-family: $ff-serif;
         }
-
-        &--btn{
-            background-color: map-get($colors, custom-magenta);
-            color: map-get($colors, off-white);
-            font-weight: map-get($font-weights, semi-bold);
-            border-radius: $border-radius;
-            padding: 1rem 2rem;
-        }
     }
     &__sponsors{
         padding: $padding;

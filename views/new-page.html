@@ -1,3 +1,4 @@
+<!-- http://127.0.0.1:5500/views/new-page.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,36 +14,51 @@
     <!-- AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <title>Legit Ones · New About Us</title>
+    <title>Legit Ones · Valorant Team</title>
 </head>
 <body>
     <header class="header">
-        <a href="../index.html"><img class="header__logotype" src="../assets/logos/logo-header.png"> </a>
-        <nav class="header__nav">
-            <ul class="header__nav-list">
-                <li class="header__nav-item"><a href="../index.html">Home</a></li>
-                <li class="header__nav-item"><a href="./teams.html">Teams</a></li>
-                <li class="header__nav-item"><a href="./about-us.html">About us</a></li>
-                <li class="header__nav-item"><a href="./contact.html">Contact</a></li>
+        <a href="../index.html"><img class="header__logotype" src="../assets/logos/l1-logo.png"  alt="Legit One Logo"></a>
+        <nav class="header__nav navbar">
+            <ul class="navbar__list">
+                <li class="navbar__list--item"><a href="../index.html">Home</a></li>
+                <li class="navbar__list--item"><a href="./teams.html">Teams</a></li>
+                <li class="navbar__list--item"><a href="./about-us.html">About us</a></li>
+                <li class="navbar__list--item"><a href="./contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <div>
-            <img src="#" alt="">
-            <h1>THE MOST POPULAR ESPORT ORGANIZATION IN THE WORLD</h1>
+    <main class="ab2">
+        <div class="ab2__intro">
+            <img src="../assets/backgrounds/danny-howe-bn-D2bCvpik-unsplash.jpg" alt="">
+            <h1 class="text-flicker-in-glow">THE MOST POPULAR ESPORT ORGANIZATION IN THE WORLD</h1>
         </div>
-        <div>
+        <div class="ab2__mission-section">
             <div>
                 <h2>OUR MISSION</h2>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, obcaecati amet magnam sint optio explicabo et architecto error suscipit, iste molestiae, consectetur sapiente quibusdam. Ratione consequatur quis repudiandae sapiente culpa!</p>
             </div>
-            <img src="#" alt="">
+            <img data-aos="fade-left" data-aos-easing="ease-in" data-aos-duration="1000" src="../assets/backgrounds/pexels-fauxels-3182773.jpg" alt="Our Mission Image">
         </div>
-        <div>
-            <div class="cards-container">
-                <div class="card">
-                    <img src="#" alt="">
+        <div class="ab2__cards-archivements-container">
+            <div class="overlay"></div>
+            <div class="ab2__cards-container">
+                <div class="card" data-aos="fade-up" data-aos-easing="ease-in-cubic" data-aos-duration="1000">
+                    <img src="../assets/backgrounds/pexels-matheus-bertelli-3856026.jpg" alt="">
+                    <div class="content">
+                        <h3>Community</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, quisquam.</p>
+                    </div>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-easing="ease-in-cubic" data-aos-duration="1500">
+                    <img src="../assets/backgrounds/fondito.jpg" alt="">
+                    <div class="content">
+                        <h3>Universe</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, quisquam.</p>
+                    </div>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-easing="ease-in-cubic" data-aos-duration="2000">
+                    <img src="../assets/backgrounds/pexels-alena-darmel-7862509.jpg" alt="">
                     <div class="content">
                         <h3>Lorem.</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, quisquam.</p>
@@ -50,42 +66,36 @@
                 </div>
             </div>
             <div class="archivements">
-                <h2>Archivements</h2>
-                <div>
-                    <div>
-                        <p>50+</p>
+                <h2>Archiv<span>ements</span></h2>
+                <div class="archivements__stats">
+                    <div data-aos="flip-up" data-aos-duration="2000">
+                        <p class="number">50<span>+</span></p>
                         <p>1st Places</p>
                     </div>
-                    <div>
-                        <p>4</p>
+                    <div data-aos="flip-up" data-aos-duration="2000">
+                        <p class="number">4</p>
                         <p>Teams</p>
                     </div>
-                    <div>
-                        <p>3k</p>
+                    <div data-aos="flip-up" data-aos-duration="2000">
+                        <p class="number">3<span>k</span></p>
                         <p>Matches</p>
                     </div>
-                    <div>
-                        <p>40M</p>
+                    <div data-aos="flip-up" data-aos-duration="2000">
+                        <p class="number">40<span>m</span></p>
                         <p>Fans Worldwide</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div>
-            <div class="info-container">
-
-            </div>
-            <div class="map"></div>
-        </div>
     </main>
     <footer>
         <p>©2023 2saucy All Rights Reserved</p>
     </footer>
-    
+
     <!-- AOS Init -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        AOS.init();
+      AOS.init();
     </script>
 </body>
 </html>

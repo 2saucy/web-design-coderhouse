@@ -27,7 +27,7 @@
 }
 
 .upcoming{
-    background-color: map-get($colors, off-white);
+    background-color: map-get($colors, smoke-white);
     .match-card__content{
         &--match{
             color: map-get($colors, dark-blue);

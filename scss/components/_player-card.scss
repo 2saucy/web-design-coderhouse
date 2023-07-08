@@ -31,8 +31,6 @@
     }
 
     @include desktop{
-        min-width: 40vw;
-
         &__player-info{
             &--image{
                 width: 120px;

@@ -1,0 +1,14 @@
+.home__text-content--btn{
+    background-color: map-get($colors, off-black);
+    color: map-get($colors, off-white);
+    font-weight: map-get($font-weights, semi-bold);
+    border-radius: $border-radius;
+    padding: 1rem 2rem;
+    transition: .2s ease;
+
+    &:hover{
+        transform: scale(1.1);
+        background-color: map-get($colors, off-white);
+        color: map-get($colors, off-black);
+    }
+}
