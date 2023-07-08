@@ -1,0 +1,59 @@
+$font-weights: (
+    "regular": 400,
+    "semi-bold": 600,
+    "extra-bold": 900,
+);
+
+$typography: (
+    "p":(
+        "font-size": 1,
+    ),
+    "h1":(
+        "font-size": (
+            "mobile": 1.5rem,
+            "desktop": 2.125rem,
+            ),
+        "line-height": 1,
+        "letter-spacing": -0.0625rem,
+    ),
+    "h2":(
+        "font-size": (
+            "mobile": 1.125rem,
+            "desktop": 1.875rem,
+            ),
+        "line-height": 1.067,
+        "letter-spacing": -0.05rem,
+    ),
+    "h3":(
+        "font-size": (
+            "mobile": 1.125rem,
+            "desktop": 1.5,
+            ),
+        "line-height": 1.083,
+        "letter-spacing": -0.0375rem,
+    )
+);
+
+@each $key, $value in $typography{
+    #{$key}{
+        @each $prop, $val in $value{
+            @if $prop == font-size{
+                #{$prop}: map-get(map-get($typography, $key), $prop, mobile);
+            }@else{
+                #{$prop}: $val;
+            }
+        }
+    }
+}
+
+@include desktop{
+    @each $key, $value in $typography{
+        #{$key}{
+            @each $prop, $val in $value{
+                @if $prop == font-size{
+                    #{$prop}: map-get(map-get($typography, $key), $prop, desktop);
+                }
+            }
+        }
+    }
+}

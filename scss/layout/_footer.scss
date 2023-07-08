@@ -1,6 +1,6 @@
 footer{
     text-align: center;
     background-color: rgb(24, 24, 24);
-    color: $color-white;
+    color: map-get($colors, off-white);
     padding: $padding;
 }

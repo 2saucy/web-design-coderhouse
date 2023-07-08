@@ -1,41 +1,22 @@
 .header{
-    @include flexbox($justify: space-between, $align-i: center);
-    background-color: $color-dark-gray;
+    @include flex-container($justify-content: space-between, $align-items: center);
+    background-color: map-get($colors, dark-gray);
     position: fixed;
     top: 0;
     z-index: 2000;
     min-width: 100%;
     min-height: 80px;
-    padding-right: 1.25rem;
 
     &__logotype{
-        width: 80px;
-        margin-top: .5rem;
+        width: 48px;
+        margin: 1rem;
     }
-    &__nav-list{
-        @include flexbox($gap: 1rem);
-        font-size: 0.875em;
-    }
-    &__nav-item{
-        a{
-            white-space: nowrap;
-            color: $color-white;
-            
-            &:hover{
-                font-weight: 600;
-            }
-        }
-    }
-
+    
     @include desktop{
-        background-color: $color-white;
-        &__nav-list{
-            font-size: 1em;
-        }
-        &__nav-item{
-            a{
-                color: $color-dark-blue;
-            }
+        background-color: map-get($colors, off-white);
+        &__logotype{
+            width: 80px;
+            margin: 0;
         }
     }
 }

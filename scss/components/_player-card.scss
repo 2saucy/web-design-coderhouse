@@ -1,54 +1,41 @@
 .player-card{
-    @include flexbox($justify: space-between);
+    @include flex-container($justify-content: space-between);
     padding: 1rem;
     border-radius: .4rem;
     box-shadow: 0 0 .9rem .1rem rgb(243, 243, 243);
     margin-bottom: 1rem;
-    width: 100%;
-
+    
     &__player-info{
-        @include flexbox($align-i:center);
+        @include flex-container($align-items:center);
+        color: map-get($colors, dark-blue);
 
         &--image{
-            width: 90px;
+            width: 80px;
         }
         &--role{
-            font-family: $ff-serif;
-            font-size: 0.875em;
-            color: $color-light-gray;
+            color: map-get($colors, light-gray);
         }
         &--nickname{
-            font-size: 1.25em;
-            font-weight: $fw-900;
-            color: $color-dark-blue;
+            font-weight: map-get($font-weights, extra-bold);
         }
         &--realname{
-            font-size: 0.875em;
-            color: $color-dark-blue;
+            font-family: $ff-serif;
         }
         &--country-flag{
             width: 24px;
         }
+
     }
     &__social-media{
-        @include flexbox($direction: column, $align-i:center, $gap: 1rem);
+        @include flex-container($direction: column, $align-items:center, $gap: 1rem);
     }
 
     @include desktop{
         min-width: 40vw;
-        
+
         &__player-info{
-            &--role{
-                font-size: 1em;
-            }
-            &--nickname{
-                font-size: 1.5em;
-            }
-            &--realname{
-                font-size: 1em;
-            }
-            &--country-flag{
-                width: 24px;
+            &--image{
+                width: 120px;
             }
         }
     }

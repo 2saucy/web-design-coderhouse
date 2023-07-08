@@ -1,41 +1,36 @@
 .contact{
-    @include flexbox();
+    @include flex-container();
     @include bg-image($url: "../assets/backgrounds/maurice-sahl.jpg");
     padding: $padding;
 
     &__content{
-        background-color: $color-white;
+        background-color: map-get($colors, off-white);;
         padding: $padding;
         border-radius: $border-radius;
         min-width: 100%;
     }
     &__title{
-        font-size: $fs-32;
         margin-bottom: 2rem;
     }
     &__text-content{
         h3{
-            color: $color-light-gray;
+            color: map-get($colors, light-gray);
             text-transform: uppercase;
         }
         p{
-            font-family: $ff-serif;
-            font-size: $fs-16;
             margin-bottom: 1.5rem;
         }
     }
     &__social-media{
-        @include flexbox();
+        @include flex-container();
         padding: 1rem 0;
     }
-    &__partners,
-    &__sponsors{
+    &__partners, &__sponsors{
         &--title{
             margin-top: 1rem;
-            font-size: $fs-28;
         }
         &--container{
-            @include flexbox($align-i: center, $wrap: wrap)
+            @include flex-container($align-items: center, $wrap: wrap)
         }
     }
     &__map{
@@ -46,7 +41,7 @@
     &__banner{
         display: none;
     }
-    
+
     @include desktop{
         &{
             padding: 0;
@@ -60,14 +55,6 @@
             min-height: 100vh;
             border-radius: 0;
             min-width: 0;
-        }
-        &__title{
-            font-size: $fs-58;
-        }
-        &__text-content{
-            p{
-                font-size: $fs-28;
-            }
         }
         &__banner{
             @include bg-image($url: "../assets/backgrounds/maurice-sahl.jpg");

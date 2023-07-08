@@ -9,18 +9,21 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&family=Roboto+Slab:wght@400;600;900&display=swap" rel="stylesheet">
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <title>Legit Ones · About us</title>
 </head>
 <body>
     <header class="header">
         <a href="../index.html"><img class="header__logotype" src="../assets/logos/l1-logo.png"  alt="Legit One Logo"></a>
-        <nav class="header__nav">
-            <ul class="header__nav-list">
-                <li class="header__nav-item"><a href="../index.html">Home</a></li>
-                <li class="header__nav-item"><a href="./teams.html">Teams</a></li>
-                <li class="header__nav-item"><a href="./about-us.html">About us</a></li>
-                <li class="header__nav-item"><a href="./contact.html">Contact</a></li>
+        <nav class="header__nav navbar">
+            <ul class="navbar__list">
+                <li class="navbar__list--item"><a href="../index.html">Home</a></li>
+                <li class="navbar__list--item"><a href="./teams.html">Teams</a></li>
+                <li class="navbar__list--item"><a href="./about-us.html">About us</a></li>
+                <li class="navbar__list--item"><a href="./contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -48,5 +51,11 @@
     <footer>
         <p>©2023 2saucy All Rights Reserved</p>
     </footer>
+    
+    <!-- AOS Init -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

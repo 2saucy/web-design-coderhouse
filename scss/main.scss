@@ -1,11 +1,13 @@
 
-@import "./base/base";
+@import "./base/reset";
+@import "./base/typography";
 
 @import "./layout/header";
 @import "./layout/footer";
+@import "./layout/navbar";
 
 @import "./components/player-card";
-@import "./components/game-card";
+@import "./components/match-card";
 @import "./components/slider";
 
 @import "./pages/index";

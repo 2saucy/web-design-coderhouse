@@ -1,0 +1,39 @@
+.match-card{
+    @include flex-container($justify-content: space-between, $align-items: center, $gap: 2rem);
+    background-color: map-get($colors, dark-blue);
+    padding: 2.5rem 1.8rem; 
+    margin-bottom: 1rem;
+    
+    &__content{
+        &--match{
+            color: map-get($colors, off-white);
+        }
+        &--info{
+            color: map-get($colors, sky-blue);
+        }
+        &--match, span{
+            font-weight: map-get($font-weights, semi-bold);
+        }
+    }
+    &__logos{
+        &--our-team{
+            margin-bottom: 1rem;
+        }
+        &--our-team,
+        &--their-team{
+            width: 48px;
+        }
+    }
+}
+
+.upcoming{
+    background-color: map-get($colors, off-white);
+    .match-card__content{
+        &--match{
+            color: map-get($colors, dark-blue);
+        }
+        &--info{
+            color: map-get($colors, light-gray);
+        }
+    }
+}

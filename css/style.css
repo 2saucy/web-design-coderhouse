@@ -1,4 +1,7 @@
-/*********** Reset ***********/
+html {
+  font-size: calc(15px + 0.390625vw);
+}
+
 * {
   font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
@@ -9,10 +12,20 @@
 body {
   line-height: 1.5;
   min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
 }
 
-img {
+p, h1, h2, h3 {
+  overflow-wrap: break-word;
+}
+
+img, picture, video, svg {
+  display: block;
   max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
 }
 
 a {
@@ -23,91 +36,115 @@ ul, ol {
   list-style: none;
 }
 
+/* 80px es el alto de nuestro fixed header */
 main {
-  min-height: 100vh;
   margin-top: 80px;
 }
 
-/*********** Components ***********/
+h1 {
+  font-size: 1.5rem;
+  line-height: 1;
+  letter-spacing: -0.0625rem;
+}
+
+h2 {
+  font-size: 1.125rem;
+  line-height: 1.067;
+  letter-spacing: -0.05rem;
+}
+
+h3 {
+  font-size: 1.125rem;
+  line-height: 1.083;
+  letter-spacing: -0.0375rem;
+}
+
+@media screen and (min-width: 55em) {
+  h1 {
+    font-size: 2.125rem;
+  }
+  h2 {
+    font-size: 1.875rem;
+  }
+  h3 {
+    font-size: 1.5;
+  }
+}
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 2rem;
   background-color: #181818;
   position: fixed;
   top: 0;
   z-index: 2000;
   min-width: 100%;
   min-height: 80px;
-  padding-right: 1.25rem;
 }
 .header__logotype {
-  width: 80px;
-  margin-top: 0.5rem;
-}
-.header__nav-list {
-  display: flex;
-  gap: 1rem;
-  font-size: 0.875em;
-}
-.header__nav-item a {
-  white-space: nowrap;
-  color: #ffffff;
-}
-.header__nav-item a:hover {
-  font-weight: 600;
+  width: 48px;
+  margin: 1rem;
 }
 @media screen and (min-width: 55em) {
   .header {
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.9803921569);
   }
-  .header__nav-list {
-    font-size: 1em;
-  }
-  .header__nav-item a {
-    color: #001C30;
+  .header__logotype {
+    width: 80px;
+    margin: 0;
   }
 }
 
 footer {
   text-align: center;
   background-color: rgb(24, 24, 24);
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.9803921569);
   padding: 2rem;
+}
+
+.navbar {
+  margin-right: 1rem;
+}
+.navbar__list {
+  display: flex;
+  gap: 1rem;
+}
+.navbar__list--item a {
+  color: rgba(255, 255, 255, 0.9803921569);
+}
+.navbar__list--item a:hover {
+  font-weight: 600;
+}
+@media screen and (min-width: 55em) {
+  .navbar__list--item a {
+    color: #001C30;
+  }
 }
 
 .player-card {
   display: flex;
   justify-content: space-between;
-  gap: 2rem;
   padding: 1rem;
   border-radius: 0.4rem;
   box-shadow: 0 0 0.9rem 0.1rem rgb(243, 243, 243);
   margin-bottom: 1rem;
-  width: 100%;
 }
 .player-card__player-info {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  color: #001C30;
 }
 .player-card__player-info--image {
-  width: 90px;
+  width: 80px;
 }
 .player-card__player-info--role {
-  font-family: "Roboto Slab", serif;
-  font-size: 0.875em;
   color: #868686;
 }
 .player-card__player-info--nickname {
-  font-size: 1.25em;
   font-weight: 900;
-  color: #001C30;
 }
 .player-card__player-info--realname {
-  font-size: 0.875em;
-  color: #001C30;
+  font-family: "Roboto Slab", serif;
 }
 .player-card__player-info--country-flag {
   width: 24px;
@@ -122,59 +159,43 @@ footer {
   .player-card {
     min-width: 40vw;
   }
-  .player-card__player-info--role {
-    font-size: 1em;
-  }
-  .player-card__player-info--nickname {
-    font-size: 1.5em;
-  }
-  .player-card__player-info--realname {
-    font-size: 1em;
-  }
-  .player-card__player-info--country-flag {
-    width: 24px;
+  .player-card__player-info--image {
+    width: 120px;
   }
 }
 
-.game-card {
+.match-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
-  background-color: #242424;
+  background-color: #001C30;
   padding: 2.5rem 1.8rem;
   margin-bottom: 1rem;
 }
-.game-card__content--match {
-  color: #FFFFFF;
-  font-size: 24px;
-  font-weight: bold;
+.match-card__content--match {
+  color: rgba(255, 255, 255, 0.9803921569);
 }
-.game-card__content--info {
+.match-card__content--info {
   color: #90EBFF;
-  font-size: 16px;
-  font-family: "Roboto Slab", serif;
 }
-.game-card__content span {
+.match-card__content--match, .match-card__content span {
   font-weight: 600;
 }
-.game-card__logos {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
+.match-card__logos--our-team {
+  margin-bottom: 1rem;
 }
-.game-card__logos--our-team, .game-card__logos--their-team {
-  width: 80px;
+.match-card__logos--our-team, .match-card__logos--their-team {
+  width: 48px;
 }
 
-.upcoming-game {
-  background-color: rgb(245, 245, 245);
+.upcoming {
+  background-color: rgba(255, 255, 255, 0.9803921569);
 }
-.upcoming-game .game-card__content--match {
+.upcoming .match-card__content--match {
   color: #001C30;
 }
-.upcoming-game .game-card__content--info {
+.upcoming .match-card__content--info {
   color: #868686;
 }
 
@@ -232,11 +253,9 @@ footer {
   }
 }
 
-/*********** Index.html ***********/
 .home {
   display: flex;
   flex-direction: column;
-  gap: 0;
 }
 .home video {
   position: relative;
@@ -248,37 +267,30 @@ footer {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  color: rgba(255, 255, 255, 0.9803921569);
   padding: 2rem;
   position: absolute;
   z-index: 1500;
   top: 25%;
-  color: #ffffff;
 }
 .home__text-content--title {
+  font-size: 3.5rem;
   text-align: center;
-  font-family: "Roboto Slab", serif;
-  font-size: 2em;
   text-transform: uppercase;
 }
 .home__text-content--title span {
-  font-weight: 900;
-  color: rgb(237, 160, 92);
+  font-family: "Roboto Slab", serif;
+  color: rgb(98, 67, 255);
 }
 .home__text-content--desc {
   font-family: "Roboto Slab", serif;
-  font-size: 1em;
 }
 .home__text-content--btn {
   background-color: #ff198f;
-  color: #ffffff;
-  font-size: 1em;
+  color: rgba(255, 255, 255, 0.9803921569);
   font-weight: 600;
   border-radius: 2rem;
   padding: 1rem 2rem;
-  transition: 0.5s ease;
-}
-.home__text-content--btn:hover {
-  background-color: #001C30;
 }
 .home__sponsors {
   padding: 2rem;
@@ -289,23 +301,18 @@ footer {
   }
   .home__text-content {
     align-items: flex-start;
-    top: 25%;
   }
   .home__text-content--title {
+    font-size: 4rem;
     text-align: start;
-    font-size: 3.625em;
-    width: 50%;
   }
   .home__text-content--desc {
-    font-size: 1.75em;
     width: 50%;
   }
 }
 
-/*********** Contact.html ***********/
 .contact {
   display: flex;
-  gap: 2rem;
   background-image: url("../assets/backgrounds/maurice-sahl.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -313,13 +320,12 @@ footer {
   padding: 2rem;
 }
 .contact__content {
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.9803921569);
   padding: 2rem;
   border-radius: 2rem;
   min-width: 100%;
 }
 .contact__title {
-  font-size: 2em;
   margin-bottom: 2rem;
 }
 .contact__text-content h3 {
@@ -327,23 +333,18 @@ footer {
   text-transform: uppercase;
 }
 .contact__text-content p {
-  font-family: "Roboto Slab", serif;
-  font-size: 1em;
   margin-bottom: 1.5rem;
 }
 .contact__social-media {
   display: flex;
-  gap: 2rem;
   padding: 1rem 0;
 }
 .contact__partners--title, .contact__sponsors--title {
   margin-top: 1rem;
-  font-size: 1.75em;
 }
 .contact__partners--container, .contact__sponsors--container {
   display: flex;
   align-items: center;
-  gap: 2rem;
   flex-wrap: wrap;
 }
 .contact__map {
@@ -367,12 +368,6 @@ footer {
     border-radius: 0;
     min-width: 0;
   }
-  .contact__title {
-    font-size: 3.625em;
-  }
-  .contact__text-content p {
-    font-size: 1.75em;
-  }
   .contact__banner {
     background-image: url("../assets/backgrounds/maurice-sahl.jpg");
     background-repeat: no-repeat;
@@ -382,10 +377,8 @@ footer {
   }
 }
 
-/*********** About-us.html ***********/
 .about-us {
   display: flex;
-  gap: 2rem;
   background-image: url("../assets/backgrounds/tony-reid.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -396,19 +389,13 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 2rem;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.9803921569);
   padding: 2rem;
   border-radius: 2rem;
   min-width: 100%;
 }
 .about-us__title {
   margin-bottom: 2rem;
-  font-size: 2em;
-}
-.about-us__description p {
-  font-family: "Roboto Slab", serif;
-  font-size: 1em;
 }
 .about-us__video {
   margin-top: 2rem;
@@ -428,12 +415,6 @@ footer {
     border-radius: 0;
     min-width: 0;
   }
-  .about-us__title {
-    font-size: 3.625em;
-  }
-  .about-us__description p {
-    font-size: 1.75em;
-  }
   .about-us__banner {
     display: block;
     background-image: url("../assets/backgrounds/tony-reid.jpg");
@@ -444,7 +425,6 @@ footer {
   }
 }
 
-/*********** Teams.html ***********/
 .teams {
   padding: 2rem;
 }
@@ -452,22 +432,19 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
-  margin: 2rem 0 5rem 0;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 .teams__text-content h1 {
   color: #001C30;
-  font-size: 2em;
 }
 .teams__text-content h1 span {
+  color: #ff198f;
   font-family: "Roboto Slab", serif;
-  font-weight: 400;
-  color: rgb(251, 75, 128);
 }
 .teams__text-content p {
-  font-size: 1em;
-  font-family: "Roboto Slab", serif;
   color: #868686;
+  font-family: "Roboto Slab", serif;
 }
 .teams__container {
   display: grid;
@@ -489,25 +466,23 @@ footer {
   .teams__text-content {
     align-items: flex-start;
   }
-  .teams__text-content h1 {
-    font-size: 3.625em;
-  }
   .teams__text-content p {
-    font-size: 1.75em;
     width: 60%;
   }
   .teams__container {
     grid-template-columns: repeat(4, 1fr);
   }
   .teams__team img {
-    height: 420px;
+    height: 30rem;
   }
 }
 
-/*********** Valorant.html, Counter-strike.html & League-of-legends-html ***********/
+.game {
+  color: #001C30;
+}
 .game__banner {
-  height: 200px;
   position: relative;
+  height: 200px;
 }
 .game__banner--lol {
   background-image: url("../assets/backgrounds/lol-banner.png");
@@ -531,8 +506,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
-  background-color: #252525;
+  background-color: #181818;
   border-radius: 50%;
   width: 120px;
   aspect-ratio: 1;
@@ -541,25 +515,16 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.game__content {
-  padding: 2rem;
-}
 .game__content--title {
-  font-size: 2em;
   text-transform: uppercase;
   margin: 4rem 0 2rem 0;
 }
-.game__content--description {
-  font-family: "Roboto Slab", serif;
-  color: #001C30;
-  font-size: 1.75em;
-  max-width: 767px;
-}
 .game__content--video {
-  margin-top: 2rem;
+  min-height: 200px;
   width: 100%;
+  margin-top: 2rem;
 }
-.game__team-matches-container {
+.game__team-matches-container, .game__content {
   padding: 2rem;
 }
 .game__team h2, .game__matches h2 {
@@ -571,28 +536,25 @@ footer {
     left: 10%;
   }
   .game__content {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
     margin-top: 0;
   }
   .game__content--video {
-    width: 700px;
+    margin-top: 0;
+    height: 300px;
+    min-width: 550px;
+  }
+  .game__content .flex-container {
+    display: flex;
+    align-items: start;
+    gap: 2rem;
   }
   .game__team-matches-container {
     display: flex;
     justify-content: space-between;
     gap: 2rem;
-    padding: 2rem;
   }
 }
 
-/* ----------------------------------------------
- * Generated by Animista on 2023-7-6 5:14:57
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info. 
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
 .rotate-center:hover {
   -webkit-animation: rotate-center 0.6s ease-in-out both;
   animation: rotate-center 0.6s ease-in-out both;

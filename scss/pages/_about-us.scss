@@ -1,24 +1,17 @@
 .about-us{
-    @include flexbox();
+    @include flex-container();
     @include bg-image($url: "../assets/backgrounds/tony-reid.jpg");
     padding: $padding;
-
+    
     &__content{
-        @include flexbox($direction: column, $justify: space-between);
-        background-color: $color-white;
+        @include flex-container($direction: column, $justify-content: space-between);
+        background-color: map-get($colors, off-white);
         padding: $padding;
         border-radius: $border-radius;
         min-width: 100%;
     }
     &__title{
         margin-bottom: 2rem;
-        font-size: $fs-32;
-    }
-    &__description{
-        p{
-            font-family: $ff-serif;
-            font-size: $fs-16;
-        }
     }
     &__video{
         margin-top: 2rem;
@@ -38,14 +31,6 @@
             width: 50%;
             border-radius: 0;
             min-width: 0;
-        }
-        &__title{
-            font-size: $fs-58;
-        }
-        &__description{
-            p{
-                font-size: $fs-28;
-            }
         }
         &__banner{
             display: block;

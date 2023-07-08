@@ -1,50 +1,41 @@
 .home{
-
-    @include flexbox($direction: column, $gap: 0);
-
+    @include flex-container($direction: column);
+    
     video{
         position: relative;
         min-height: 100vh;
         object-fit: cover;
     }
-
     &__text-content{
-        @include flexbox($direction: column, $align-i: center);
+        @include flex-container($direction: column, $align-items: center, $gap: 2rem);
+        color: map-get($colors, off-white);
         padding: $padding;
         position: absolute;
         z-index: 1500;
         top: 25%;
-        color: $color-white;
 
         &--title{
+            font-size: 3.5rem;
             text-align: center;
-            font-family: $ff-serif;
-            font-size: $fs-32;
             text-transform: uppercase;
             span{
-                font-weight: $fw-900;
-                color: rgb(237, 160, 92);
+                font-family: $ff-serif;
+                color: rgb(98, 67, 255);
             }
         }
+
         &--desc{
             font-family: $ff-serif;
-            font-size: $fs-16;
         }
+
         &--btn{
-            background-color: #ff198f;
-            color: $color-white;
-            font-size: $fs-16;
-            font-weight: $fw-600;
+            background-color: map-get($colors, custom-magenta);
+            color: map-get($colors, off-white);
+            font-weight: map-get($font-weights, semi-bold);
             border-radius: $border-radius;
             padding: 1rem 2rem;
-            transition: .5s ease;
-    
-            &:hover{
-                background-color: $color-dark-blue;
-            }
         }
     }
-
     &__sponsors{
         padding: $padding;
     }
@@ -55,15 +46,12 @@
         }
         &__text-content{
             align-items: flex-start;
-            top: 25%;
 
             &--title{
+                font-size: 4rem;
                 text-align: start;
-                font-size: $fs-58;
-                width: 50%;
             }
             &--desc{
-                font-size: $fs-28;
                 width: 50%;
             }
         }
