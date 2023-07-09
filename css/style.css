@@ -541,7 +541,7 @@ h3 {
 .ab2__mission-section div h2 {
   margin-bottom: 1rem;
 }
-.ab2__cards-archivements-container {
+.ab2__cards-archievements-container {
   background-image: url("../assets/backgrounds/index-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -598,7 +598,7 @@ h3 {
   }
 }
 
-.archivements {
+.archievements {
   display: flex;
   flex-direction: column;
   color: rgba(255, 255, 255, 0.9803921569);
@@ -606,35 +606,35 @@ h3 {
   text-transform: uppercase;
   text-align: center;
 }
-.archivements span {
+.archievements span {
   color: red;
 }
-.archivements__stats {
+.archievements__stats {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-.archivements div {
+.archievements div {
   font-weight: 900;
 }
-.archivements div .number {
+.archievements div .number {
   font-size: 2rem;
 }
 @media screen and (min-width: 55em) {
-  .archivements h2 {
+  .archievements h2 {
     margin: 5rem 0;
     font-size: 4.2rem;
   }
-  .archivements__stats {
+  .archievements__stats {
     flex-direction: row;
     justify-content: space-evenly;
   }
-  .archivements div {
+  .archievements div {
     margin-bottom: 5rem;
   }
-  .archivements div .number {
+  .archievements div .number {
     font-size: 4rem;
   }
 }
