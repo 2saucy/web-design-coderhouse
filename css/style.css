@@ -103,6 +103,15 @@ h3 {
   color: rgba(255, 255, 255, 0.9803921569);
   padding: 2rem;
 }
+.footer__legal-stuff {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__legal-stuff div {
+  display: flex;
+  gap: 1rem;
+}
 .footer__contact, .footer__follow-us {
   margin: 2rem 0;
 }
@@ -123,15 +132,6 @@ h3 {
 }
 .footer__map {
   width: 100%;
-}
-.footer__legal-stuff {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.footer__legal-stuff div {
-  display: flex;
-  gap: 1rem;
 }
 @media screen and (min-width: 55em) {
   .footer__content {
@@ -594,6 +594,7 @@ h3 {
 @media screen and (min-width: 55em) {
   .card {
     max-width: 350px;
+    height: 590px;
   }
 }
 
@@ -648,7 +649,7 @@ h3 {
 }
 
 .text-flicker-in-glow {
-  animation: text-flicker-in-glow 4s linear both;
+  animation: text-flicker-in-glow 3s linear both;
 }
 
 /* ----------------------------------------------
