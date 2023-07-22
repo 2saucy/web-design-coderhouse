@@ -307,345 +307,26 @@ h3 {
   color: #0f0f0f;
 }
 
-.home {
-  display: flex;
-  flex-direction: column;
-}
-.home video {
-  position: relative;
-  min-height: 100vh;
-  object-fit: cover;
-}
-.home__text-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  color: rgba(255, 255, 255, 0.9803921569);
-  padding: 2rem;
-  position: absolute;
-  z-index: 1500;
-  top: 25%;
-}
-.home__text-content--title {
-  font-size: 3.5rem;
-  text-align: center;
-  text-transform: uppercase;
-}
-.home__text-content--title span {
-  font-family: "Roboto Slab", serif;
-  color: rgb(98, 67, 255);
-}
-.home__text-content--desc {
-  font-family: "Roboto Slab", serif;
-}
-.home__sponsors {
-  padding: 2rem;
-}
-@media screen and (min-width: 55em) {
-  .home video {
-    width: 100vw;
-  }
-  .home__text-content {
-    align-items: flex-start;
-  }
-  .home__text-content--title {
-    font-size: 4rem;
-    text-align: start;
-  }
-  .home__text-content--desc {
-    width: 50%;
-  }
-}
-
-.teams {
-  padding: 2rem;
-}
-.teams__text-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-.teams__text-content h1 {
-  color: #001C30;
-}
-.teams__text-content h1 span {
-  color: #ff198f;
-  font-family: "Roboto Slab", serif;
-}
-.teams__text-content p {
-  color: #868686;
-  font-family: "Roboto Slab", serif;
-}
-.teams__container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-}
-.teams__team img {
-  filter: grayscale(100%);
-  border-radius: 0.5rem;
-  object-fit: cover;
-  transition: 0.5s ease;
-}
-.teams__team img:hover {
-  filter: none;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.56);
-  transform: scale(1.05);
-}
-@media screen and (min-width: 55em) {
-  .teams__text-content {
-    align-items: flex-start;
-  }
-  .teams__text-content p {
-    width: 60%;
-  }
-  .teams__container {
-    grid-template-columns: repeat(4, 1fr);
-  }
-  .teams__team img {
-    height: 30rem;
-  }
-}
-
-.game {
-  color: #001C30;
-}
-.game__banner {
-  position: relative;
-  height: 200px;
-}
-.game__banner--lol {
-  background-image: url("../assets/backgrounds/lol-banner.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-.game__banner--valorant {
-  background-image: url("../assets/backgrounds/valorant-banner.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-.game__banner--csgo {
-  background-image: url("../assets/backgrounds/csgo-banner.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-.game__circle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #181818;
-  border-radius: 50%;
-  width: 120px;
-  aspect-ratio: 1;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.game__text-content .flex-container h1 {
-  text-transform: uppercase;
-  margin: 4rem 0 2rem 0;
-}
-.game__text-content iframe {
-  min-height: 200px;
-  width: 100%;
-  margin-top: 2rem;
-}
-.game__team-matches-container, .game__text-content {
-  padding: 2rem;
-}
-.game__team h2, .game__matches h2 {
-  margin-bottom: 1rem;
-}
-@media screen and (min-width: 55em) {
-  .game__circle {
-    top: 100%;
-    left: 10%;
-  }
-  .game__text-content {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-  }
-  .game__text-content iframe {
-    height: 300px;
-    min-width: 520px;
-  }
-  .game__team-matches-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-  }
-  .game__team, .game__matches {
-    width: 50%;
-  }
-}
-
-.rotate-center:hover {
-  -webkit-animation: rotate-center 0.6s ease-in-out both;
-  animation: rotate-center 0.6s ease-in-out both;
-}
-
-@-webkit-keyframes rotate-center {
-  0% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-@keyframes rotate-center {
-  0% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-.ab2__intro {
-  position: relative;
-}
-.ab2__intro img {
-  min-height: 70vh;
-  object-fit: cover;
-}
-.ab2__intro h1 {
-  color: rgba(255, 255, 255, 0.9803921569);
-  text-align: center;
-  font-size: 3rem;
-  width: 70%;
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.ab2__mission-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-  padding: 2rem;
-  text-align: center;
-}
-.ab2__mission-section div h2 {
-  margin-bottom: 1rem;
-}
-.ab2__cards-archievements-container {
-  background-image: url("../assets/backgrounds/index-bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  z-index: 1;
-}
-.ab2__cards-container {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-  padding: 2rem;
-}
-@media screen and (min-width: 55em) {
-  .ab2__intro img {
-    min-width: 100%;
-    max-height: 600px;
-  }
-  .ab2__intro h1 {
-    text-align: start;
-    top: 30%;
-    left: 40%;
-  }
-  .ab2__mission-section {
-    text-align: start;
-    flex-direction: row;
-  }
-  .ab2__mission-section img {
-    max-width: 400px;
-  }
-}
-
-.card {
+.about-us-card {
   display: flex;
   flex-direction: column;
   background-color: #181818;
   border-radius: 1rem;
 }
-.card img {
+.about-us-card img {
   border-radius: 1rem 1rem 0 0;
   max-height: 200px;
   object-fit: cover;
 }
-.card .content {
+.about-us-card .content {
   color: rgba(255, 255, 255, 0.9803921569);
   padding: 2rem;
 }
 @media screen and (min-width: 55em) {
-  .card {
+  .about-us-card {
     max-width: 350px;
     height: 590px;
   }
-}
-
-.archievements {
-  display: flex;
-  flex-direction: column;
-  color: rgba(255, 255, 255, 0.9803921569);
-  padding: 2rem;
-  text-transform: uppercase;
-  text-align: center;
-}
-.archievements span {
-  color: red;
-}
-.archievements__stats {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-.archievements div {
-  font-weight: 900;
-}
-.archievements div .number {
-  font-size: 2rem;
-}
-@media screen and (min-width: 55em) {
-  .archievements h2 {
-    margin: 5rem 0;
-    font-size: 4.2rem;
-  }
-  .archievements__stats {
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-  .archievements div {
-    margin-bottom: 5rem;
-  }
-  .archievements div .number {
-    font-size: 4rem;
-  }
-}
-
-.overlay {
-  background: rgb(0, 0, 0);
-  background: linear-gradient(0deg, rgb(0, 0, 0) 48%, rgba(0, 0, 0, 0) 89%);
-  position: absolute;
-  z-index: -1;
-  min-height: 100%;
-  min-width: 100%;
 }
 
 .text-flicker-in-glow {
@@ -782,6 +463,321 @@ h3 {
     opacity: 1;
     text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
   }
+}
+.home {
+  display: flex;
+  flex-direction: column;
+}
+.home video {
+  position: relative;
+  min-height: 100vh;
+  object-fit: cover;
+}
+.home__text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  color: rgba(255, 255, 255, 0.9803921569);
+  padding: 2rem;
+  position: absolute;
+  z-index: 1500;
+  top: 25%;
+}
+.home__text-content--title {
+  font-size: 3.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.home__text-content--title span {
+  font-family: "Roboto Slab", serif;
+  color: rgb(98, 67, 255);
+}
+.home__text-content--desc {
+  font-family: "Roboto Slab", serif;
+}
+.home__sponsors {
+  padding: 2rem;
+}
+@media screen and (min-width: 55em) {
+  .home video {
+    width: 100vw;
+  }
+  .home__text-content {
+    align-items: flex-start;
+  }
+  .home__text-content--title {
+    font-size: 4rem;
+    text-align: start;
+  }
+  .home__text-content--desc {
+    width: 50%;
+  }
+}
+
+.teams {
+  padding: 2rem;
+}
+.teams__text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.teams__text-content h1 {
+  color: #001C30;
+}
+.teams__text-content h1 span {
+  color: #ff198f;
+  font-family: "Roboto Slab", serif;
+}
+.teams__text-content p {
+  color: #868686;
+  font-family: "Roboto Slab", serif;
+}
+.teams__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+.teams__team img {
+  filter: grayscale(100%);
+  border-radius: 0.5rem;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+.teams__team img:hover {
+  filter: none;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.56);
+  transform: scale(1.05);
+}
+@media screen and (min-width: 55em) {
+  .teams__text-content {
+    align-items: flex-start;
+  }
+  .teams__text-content p {
+    width: 60%;
+  }
+  .teams__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .teams__team img {
+    height: 30rem;
+  }
+}
+
+.game {
+  color: #001C30;
+}
+.game__banner {
+  position: relative;
+  height: 200px;
+}
+.game__banner--lol {
+  background-image: url("../assets/backgrounds/lol-banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.game__banner--valorant {
+  background-image: url("../assets/backgrounds/valorant-banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.game__banner--csgo {
+  background-image: url("../assets/backgrounds/csgo-banner.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.game__circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #181818;
+  border-radius: 50%;
+  width: 120px;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.game__text-content .flex-container h1 {
+  text-transform: uppercase;
+  margin: 4rem 0 2rem 0;
+}
+.game__text-content iframe {
+  min-height: 200px;
+  width: 100%;
+  margin-top: 2rem;
+}
+.game__team-matches-container, .game__text-content {
+  padding: 2rem;
+}
+.game__team h2, .game__matches h2 {
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 55em) {
+  .game__circle {
+    top: 100%;
+    left: 10%;
+  }
+  .game__text-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .game__text-content iframe {
+    height: 300px;
+    min-width: 520px;
+  }
+  .game__team-matches-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  .game__team, .game__matches {
+    width: 50%;
+  }
+}
+
+.rotate-center:hover {
+  -webkit-animation: rotate-center 0.6s ease-in-out both;
+  animation: rotate-center 0.6s ease-in-out both;
+}
+
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.about-us__intro {
+  position: relative;
+}
+.about-us__intro img {
+  min-height: 70vh;
+  object-fit: cover;
+}
+.about-us__intro h1 {
+  color: rgba(255, 255, 255, 0.9803921569);
+  text-align: center;
+  font-size: 3rem;
+  width: 70%;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.about-us__our-mission {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  text-align: center;
+}
+.about-us__our-mission div h2 {
+  margin-bottom: 1rem;
+}
+.about-us__container {
+  background-image: url("../assets/backgrounds/index-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+.about-us__cards-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+}
+.about-us__archievements-section {
+  display: flex;
+  flex-direction: column;
+  color: rgba(255, 255, 255, 0.9803921569);
+  padding: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+.about-us__archievements-section span {
+  color: red;
+}
+.about-us__archievements-section div {
+  font-weight: 900;
+}
+.about-us__archievements-section div .number {
+  font-size: 2rem;
+}
+.about-us__archievements-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+@media screen and (min-width: 55em) {
+  .about-us__intro img {
+    min-width: 100%;
+    max-height: 600px;
+  }
+  .about-us__intro h1 {
+    text-align: start;
+    top: 30%;
+    left: 40%;
+  }
+  .about-us__our-mission {
+    text-align: start;
+    flex-direction: row;
+  }
+  .about-us__our-mission img {
+    max-width: 400px;
+  }
+  .about-us__archievements-section h2 {
+    margin: 5rem 0;
+    font-size: 4.2rem;
+  }
+  .about-us__archievements-section div {
+    margin-bottom: 5rem;
+  }
+  .about-us__archievements-section div .number {
+    font-size: 4rem;
+  }
+  .about-us__archievements-container {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+
+.overlay {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgb(0, 0, 0) 48%, rgba(0, 0, 0, 0) 89%);
+  position: absolute;
+  z-index: -1;
+  min-height: 100%;
+  min-width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

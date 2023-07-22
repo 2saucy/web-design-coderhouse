@@ -1,0 +1,8 @@
+.overlay{
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 48%, rgba(0,0,0,0) 89%);
+    position: absolute;
+    z-index: -1;
+    min-height: 100%;
+    min-width: 100%;
+}

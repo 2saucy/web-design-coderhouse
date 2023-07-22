@@ -35,7 +35,7 @@
             }
         }
     }
-
+    
     @include desktop{
         &__text-content{
             align-items: flex-start;
@@ -44,7 +44,7 @@
             }
         }
         &__container{
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
         }
         &__team{
             img{

@@ -1,0 +1,18 @@
+.about-us-card{
+    @include flex-container($direction: column);
+    background-color: map-get($colors, dark-gray);
+    border-radius: 1rem;
+    img{
+        border-radius: 1rem 1rem 0 0;
+        max-height: 200px;
+        object-fit: cover;
+    }
+    .content{
+        color: map-get($colors, off-white);
+        padding: $padding;
+    }
+    @include desktop{
+        max-width: 350px;
+        height: 590px;
+    }
+}
