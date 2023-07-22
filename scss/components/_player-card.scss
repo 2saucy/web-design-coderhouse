@@ -5,36 +5,38 @@
     box-shadow: 0 0 .9rem .1rem rgb(243, 243, 243);
     margin-bottom: 1rem;
     
-    &__player-info{
+    &__info-container{
         @include flex-container($align-items:center);
         color: map-get($colors, dark-blue);
-
-        &--image{
-            width: 80px;
-        }
-        &--role{
-            color: map-get($colors, light-gray);
-        }
-        &--nickname{
-            font-weight: map-get($font-weights, extra-bold);
-        }
-        &--realname{
-            font-family: $ff-serif;
-        }
-        &--country-flag{
-            width: 24px;
-        }
-
     }
+
+    &__player-img{
+        width: 80px;
+    }
+
+    &__role{
+        color: map-get($colors, light-gray);
+    }
+
+    &__nickname{
+        font-weight: map-get($font-weights, extra-bold);
+    }
+
+    &__realname{
+        font-family: $ff-serif;
+    }
+
+    &__country-img{
+        width: 24px;
+    }
+
     &__social-media{
         @include flex-container($direction: column, $align-items:center, $gap: 1rem);
     }
 
     @include desktop{
-        &__player-info{
-            &--image{
-                width: 120px;
-            }
+        &__player-img{
+            width: 120px;
         }
     }
 }

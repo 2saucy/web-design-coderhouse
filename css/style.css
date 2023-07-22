@@ -172,24 +172,24 @@ h3 {
   box-shadow: 0 0 0.9rem 0.1rem rgb(243, 243, 243);
   margin-bottom: 1rem;
 }
-.player-card__player-info {
+.player-card__info-container {
   display: flex;
   align-items: center;
   color: #001C30;
 }
-.player-card__player-info--image {
+.player-card__player-img {
   width: 80px;
 }
-.player-card__player-info--role {
+.player-card__role {
   color: #868686;
 }
-.player-card__player-info--nickname {
+.player-card__nickname {
   font-weight: 900;
 }
-.player-card__player-info--realname {
+.player-card__realname {
   font-family: "Roboto Slab", serif;
 }
-.player-card__player-info--country-flag {
+.player-card__country-img {
   width: 24px;
 }
 .player-card__social-media {
@@ -199,7 +199,7 @@ h3 {
   gap: 1rem;
 }
 @media screen and (min-width: 55em) {
-  .player-card__player-info--image {
+  .player-card__player-img {
     width: 120px;
   }
 }
