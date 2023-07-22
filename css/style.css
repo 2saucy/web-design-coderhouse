@@ -209,34 +209,33 @@ h3 {
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
-  background-color: #001C30;
   padding: 2.5rem 1.8rem;
   margin-bottom: 1rem;
+  background-color: #001C30;
 }
-.match-card__content--match {
-  color: rgba(255, 255, 255, 0.9803921569);
-}
-.match-card__content--info {
-  color: #90EBFF;
-}
-.match-card__content--match, .match-card__content span {
+.match-card__team-versus, .match-card__tournament-date > span {
   font-weight: 600;
 }
-.match-card__logos--our-team {
-  margin-bottom: 1rem;
+.match-card__team-versus {
+  color: rgba(255, 255, 255, 0.9803921569);
 }
-.match-card__logos--our-team, .match-card__logos--their-team {
-  width: 48px;
+.match-card__tournament-date {
+  color: #90EBFF;
 }
-
-.upcoming {
+.match-card--active {
   background-color: #f5f5f5;
 }
-.upcoming .match-card__content--match {
+.match-card--active .match-card__team-versus {
   color: #001C30;
 }
-.upcoming .match-card__content--info {
+.match-card--active .match-card__tournament-date {
   color: #868686;
+}
+.match-card__our-logo {
+  margin-bottom: 1rem;
+}
+.match-card__our-logo, .match-card__their-logo {
+  width: 48px;
 }
 
 @keyframes scroll {
@@ -574,19 +573,19 @@ h3 {
   position: relative;
   height: 200px;
 }
-.game__banner--lol {
+.game__banner__lol {
   background-image: url("../assets/backgrounds/lol-banner.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-.game__banner--valorant {
+.game__banner__valorant {
   background-image: url("../assets/backgrounds/valorant-banner.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-.game__banner--csgo {
+.game__banner__csgo {
   background-image: url("../assets/backgrounds/csgo-banner.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -614,10 +613,10 @@ h3 {
   width: 100%;
   margin-top: 2rem;
 }
-.game__team-matches-container, .game__text-content {
+.game__roster-matches, .game__text-content {
   padding: 2rem;
 }
-.game__team h2, .game__matches h2 {
+.game__roster h2, .game__matches h2 {
   margin-bottom: 1rem;
 }
 @media screen and (min-width: 55em) {
@@ -634,12 +633,12 @@ h3 {
     height: 300px;
     min-width: 520px;
   }
-  .game__team-matches-container {
+  .game__roster-matches {
     display: flex;
     justify-content: space-between;
     gap: 2rem;
   }
-  .game__team, .game__matches {
+  .game__roster, .game__matches {
     width: 50%;
   }
 }

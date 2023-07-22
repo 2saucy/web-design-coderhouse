@@ -1,39 +1,31 @@
 .match-card{
     @include flex-container($justify-content: space-between, $align-items: center, $gap: 2rem);
-    background-color: map-get($colors, dark-blue);
     padding: 2.5rem 1.8rem; 
     margin-bottom: 1rem;
-    
-    &__content{
-        &--match{
-            color: map-get($colors, off-white);
-        }
-        &--info{
-            color: map-get($colors, sky-blue);
-        }
-        &--match, span{
-            font-weight: map-get($font-weights, semi-bold);
-        }
+    background-color: map-get($colors, dark-blue);
+    &__team-versus, &__tournament-date > span{
+        font-weight: map-get($font-weights, semi-bold);
     }
-    &__logos{
-        &--our-team{
-            margin-bottom: 1rem;
-        }
-        &--our-team,
-        &--their-team{
-            width: 48px;
-        }
+    &__team-versus{
+        color: map-get($colors, off-white);
     }
-}
+    &__tournament-date{
+        color: map-get($colors, sky-blue);
+    }
+    &--active{
+        background-color: map-get($colors, smoke-white);
 
-.upcoming{
-    background-color: map-get($colors, smoke-white);
-    .match-card__content{
-        &--match{
+        .match-card__team-versus{
             color: map-get($colors, dark-blue);
         }
-        &--info{
+        .match-card__tournament-date{
             color: map-get($colors, light-gray);
         }
+    }
+    &__our-logo{
+        margin-bottom: 1rem;
+    }
+    &__our-logo, &__their-logo{
+        width: 48px;
     }
 }

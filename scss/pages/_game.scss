@@ -5,13 +5,13 @@
         position: relative;
         height: 200px;
 
-        &--lol{
+        &__lol{
             @include bg-image($url: "../assets/backgrounds/lol-banner.png");
         }
-        &--valorant{
+        &__valorant{
             @include bg-image($url: "../assets/backgrounds/valorant-banner.png");
         }
-        &--csgo{
+        &__csgo{
             @include bg-image($url: "../assets/backgrounds/csgo-banner.jpeg");
         }
     }
@@ -36,10 +36,10 @@
             margin-top: 2rem;
         }
     }
-    &__team-matches-container, &__text-content{
+    &__roster-matches, &__text-content{
         padding: $padding;
     }
-    &__team, &__matches{
+    &__roster, &__matches{
         h2{
             margin-bottom: 1rem;
         }
@@ -58,10 +58,10 @@
                 min-width: 520px;
             }
         }
-        &__team-matches-container{
+        &__roster-matches{
             @include flex-container($justify-content: space-between, $gap:2rem);
         }
-        &__team, &__matches{
+        &__roster, &__matches{
             width: 50%;
         }
     }
