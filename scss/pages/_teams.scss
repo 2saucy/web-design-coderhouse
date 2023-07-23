@@ -1,4 +1,5 @@
 .teams{
+    
     padding: $padding;
     
     &__text-content{
@@ -18,9 +19,11 @@
             font-family: $ff-serif;
         }
     }
+
     &__container{
         @include grid-container($columns: 1fr, $gap: 2rem);
     }
+
     &__team{
         img{
             filter: grayscale(100%);
@@ -37,15 +40,18 @@
     }
     
     @include desktop{
+
         &__text-content{
             align-items: flex-start;
             p{
                 width: 60%;
             }
         }
+
         &__container{
             grid-template-columns: repeat(3, 1fr);
         }
+
         &__team{
             img{
                 height: 30rem;

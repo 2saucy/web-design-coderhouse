@@ -1,4 +1,5 @@
 .home{
+    
     @include flex-container($direction: column);
     
     video{
@@ -6,6 +7,7 @@
         min-height: 100vh;
         object-fit: cover;
     }
+
     &__text-content{
         @include flex-container($direction: column, $align-items: center, $gap: 2rem);
         color: map-get($colors, off-white);
@@ -13,39 +15,43 @@
         position: absolute;
         z-index: 1500;
         top: 25%;
+    }
 
-        &--title{
-            font-size: 3.5rem;
-            text-align: center;
-            text-transform: uppercase;
-            span{
-                font-family: $ff-serif;
-                color: rgb(98, 67, 255);
-            }
-        }
-
-        &--desc{
+    &__title{
+        font-size: 3.5rem;
+        text-align: center;
+        text-transform: uppercase;
+        span{
             font-family: $ff-serif;
+            color: rgb(98, 67, 255);
         }
     }
+
+    &__description{
+        font-family: $ff-serif;
+    }
+
     &__sponsors{
         padding: $padding;
     }
 
     @include desktop{
+
         video{
             width: 100vw;
         }
+
         &__text-content{
             align-items: flex-start;
+        }
 
-            &--title{
-                font-size: 4rem;
-                text-align: start;
-            }
-            &--desc{
-                width: 50%;
-            }
+        &__title{
+            font-size: 4rem;
+            text-align: start;
+        }
+
+        &__description{
+            width: 50%;
         }
     }
 }

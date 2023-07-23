@@ -312,12 +312,12 @@ h3 {
   background-color: #181818;
   border-radius: 1rem;
 }
-.about-us-card img {
+.about-us-card__img {
   border-radius: 1rem 1rem 0 0;
   max-height: 200px;
   object-fit: cover;
 }
-.about-us-card .content {
+.about-us-card__text-content {
   color: rgba(255, 255, 255, 0.9803921569);
   padding: 2rem;
 }
@@ -483,16 +483,16 @@ h3 {
   z-index: 1500;
   top: 25%;
 }
-.home__text-content--title {
+.home__title {
   font-size: 3.5rem;
   text-align: center;
   text-transform: uppercase;
 }
-.home__text-content--title span {
+.home__title span {
   font-family: "Roboto Slab", serif;
   color: rgb(98, 67, 255);
 }
-.home__text-content--desc {
+.home__description {
   font-family: "Roboto Slab", serif;
 }
 .home__sponsors {
@@ -505,11 +505,11 @@ h3 {
   .home__text-content {
     align-items: flex-start;
   }
-  .home__text-content--title {
+  .home__title {
     font-size: 4rem;
     text-align: start;
   }
-  .home__text-content--desc {
+  .home__description {
     width: 50%;
   }
 }

@@ -1,4 +1,5 @@
 .game{
+    
     color: map-get($colors, dark-blue);
     
     &__banner{
@@ -15,6 +16,7 @@
             @include bg-image($url: "../assets/backgrounds/csgo-banner.jpeg");
         }
     }
+
     &__circle{
         @include flex-container($justify-content:center, $align-items: center);
         @include circle($width: 120px);
@@ -23,6 +25,7 @@
         left: 50%;
         transform: translate(-50%,-50%);
     }
+
     &__text-content{   
         .flex-container{
             h1{
@@ -36,9 +39,11 @@
             margin-top: 2rem;
         }
     }
+
     &__roster-matches, &__text-content{
         padding: $padding;
     }
+
     &__roster, &__matches{
         h2{
             margin-bottom: 1rem;
@@ -46,10 +51,12 @@
     }
 
     @include desktop{
+
         &__circle{
             top: 100%;
             left: 10%;
         }
+
         &__text-content{
             @include flex-container($align-items: center, $gap: 2rem);
 
@@ -58,9 +65,11 @@
                 min-width: 520px;
             }
         }
+
         &__roster-matches{
             @include flex-container($justify-content: space-between, $gap:2rem);
         }
+
         &__roster, &__matches{
             width: 50%;
         }
