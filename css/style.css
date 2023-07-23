@@ -152,14 +152,14 @@ h3 {
   display: flex;
   gap: 1rem;
 }
-.navbar__list--item a {
+.navbar__item a {
   color: rgba(255, 255, 255, 0.9803921569);
 }
-.navbar__list--item a:hover {
+.navbar__item a:hover {
   font-weight: 600;
 }
 @media screen and (min-width: 55em) {
-  .navbar__list--item a {
+  .navbar__item a {
     color: #001C30;
   }
 }
@@ -292,7 +292,7 @@ h3 {
   }
 }
 
-.home__text-content--btn {
+.home__btn {
   background-color: #0f0f0f;
   color: rgba(255, 255, 255, 0.9803921569);
   font-weight: 600;
@@ -300,7 +300,7 @@ h3 {
   padding: 1rem 2rem;
   transition: 0.2s ease;
 }
-.home__text-content--btn:hover {
+.home__btn:hover {
   transform: scale(1.1);
   background-color: rgba(255, 255, 255, 0.9803921569);
   color: #0f0f0f;

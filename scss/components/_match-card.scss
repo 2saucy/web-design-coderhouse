@@ -3,15 +3,19 @@
     padding: 2.5rem 1.8rem; 
     margin-bottom: 1rem;
     background-color: map-get($colors, dark-blue);
+    
     &__team-versus, &__tournament-date > span{
         font-weight: map-get($font-weights, semi-bold);
     }
+
     &__team-versus{
         color: map-get($colors, off-white);
     }
+
     &__tournament-date{
         color: map-get($colors, sky-blue);
     }
+
     &--active{
         background-color: map-get($colors, smoke-white);
 
@@ -22,10 +26,13 @@
             color: map-get($colors, light-gray);
         }
     }
+
     &__our-logo{
         margin-bottom: 1rem;
     }
+
     &__our-logo, &__their-logo{
         width: 48px;
     }
+
 }

@@ -1,24 +1,25 @@
 .navbar{
+
     margin-right: 1rem;
     
     &__list{
         @include flex-container($gap: 1rem);
-        &--item{
-            a{
-                color: map-get($colors, off-white);
-                &:hover{
-                    font-weight: map-get($font-weights, semi-bold);
-                }
+    }
+
+    &__item{
+        a{
+            color: map-get($colors, off-white);
+            &:hover{
+                font-weight: map-get($font-weights, semi-bold);
             }
         }
     }
 
     @include desktop{
-        &__list{
-            &--item{
-                a{
-                    color: map-get($colors, dark-blue);
-                }
+        
+        &__item{
+            a{
+                color: map-get($colors, dark-blue);
             }
         }
     }
