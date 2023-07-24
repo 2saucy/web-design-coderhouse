@@ -12,6 +12,10 @@
         div{
             display: flex;
             gap: 1rem;
+
+            a{
+                color: map-get($colors, baby-blue);
+            }
         }
     }
 
