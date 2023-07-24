@@ -5,21 +5,35 @@
     &__list{
         @include flex-container($gap: 1rem);
     }
-
+    
     &__item{
         a{
-            color: map-get($colors, off-white);
+            color: map-get($colors, light-gray);
             &:hover{
+                color: map-get($colors, smoke-white);
+            }
+        }
+
+        &--active{
+            a{
+                color: map-get($colors, off-white);
                 font-weight: map-get($font-weights, semi-bold);
             }
         }
     }
 
-    @include desktop{
-        
+    @include desktop{ 
         &__item{
             a{
-                color: map-get($colors, dark-blue);
+                &:hover{
+                    color: map-get($colors, off-black);
+                }
+            }
+
+            &--active{
+                a{
+                    color: map-get($colors, off-black);
+                }
             }
         }
     }

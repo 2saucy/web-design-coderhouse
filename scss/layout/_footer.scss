@@ -15,6 +15,10 @@
 
             a{
                 color: map-get($colors, baby-blue);
+
+                &:hover{
+                    color: map-get($colors, sky-blue);
+                }
             }
         }
     }
@@ -29,7 +33,7 @@
 
     &__contact{
         h5{
-            color: rgba(162, 162, 162, 0.634);
+            color: map-get($colors, baby-blue);
         }
     }
 
